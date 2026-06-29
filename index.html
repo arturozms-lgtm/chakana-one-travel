@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chakana One Travel — Capac Inti Raymi 2026</title>
+  <meta name="description" content="Retiro espiritual andino-amazónico en el Valle Sagrado del Cusco. 7 días de transformación, ceremonias y sabiduría ancestral. Diciembre 2026." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ NAV ══ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <div class="nav__logo">
+        <img src="images/logo.png" alt="Chakana One Travel" class="nav__logo-img" id="logoImg" />
+        <span class="nav__logo-text">Chakana One Travel</span>
+      </div>
+      <div class="nav__links">
+        <a href="#programa" class="nav__link" data-es="Programa" data-en="Program">Programa</a>
+        <a href="#plantas" class="nav__link" data-es="Plantas" data-en="Plants">Plantas</a>
+        <a href="#lugar" class="nav__link" data-es="Lugar" data-en="Venue">Lugar</a>
+        <a href="#galeria" class="nav__link" data-es="Galería" data-en="Gallery">Galería</a>
+        <a href="#precio" class="nav__link" data-es="Inscripción" data-en="Enroll">Inscripción</a>
+        <button class="lang-toggle" id="langToggle">EN</button>
+      </div>
+      <button class="nav__burger" id="burger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HERO DIVIDIDO ══ -->
+  <section class="hero" id="inicio">
+
+    <!-- ── Panel izquierdo: Noche / Cruz del Sur ── -->
+    <div class="hero__panel hero__panel--noche" id="panelNoche"
+         role="button" tabindex="0" aria-label="Ceremonias nocturnas">
+      <div class="hero__panel-bg hero__panel-bg--noche"></div>
+      <div class="hero__panel-overlay hero__panel-overlay--noche"></div>
+      <div class="hero__panel-stars" id="panelStars"></div>
+      <div class="hero__panel-content">
+        <div class="panel__icon">☽</div>
+        <p class="panel__eyebrow"
+           data-es="Cruz del Sur · Noche Sagrada"
+           data-en="Southern Cross · Sacred Night">Cruz del Sur · Noche Sagrada</p>
+        <h2 class="panel__heading"
+            data-es="Ceremonias" data-en="Ceremonies">Ceremonias</h2>
+        <p class="panel__desc"
+           data-es="Ayahuasca · Wachuma · Fuego Sagrado"
+           data-en="Ayahuasca · Wachuma · Sacred Fire">Ayahuasca · Wachuma · Fuego Sagrado</p>
+        <span class="panel__cta"
+              data-es="Ver plantas →" data-en="See plants →">Ver plantas →</span>
+      </div>
+    </div>
+
+    <!-- ── Divisor central ── -->
+    <div class="hero__split-divider" aria-hidden="true">
+      <div class="hero__split-line"></div>
+      <svg class="hero__split-chakana" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M33,0 H67 V33 H100 V67 H67 V100 H33 V67 H0 V33 H33 Z"
+          fill="none" stroke="#C8922A" stroke-width="3"/>
+      </svg>
+      <div class="hero__split-line"></div>
+    </div>
+
+    <!-- ── Panel derecho: Día / Pisaq ── -->
+    <div class="hero__panel hero__panel--dia" id="panelDia"
+         role="button" tabindex="0" aria-label="Templos sagrados">
+      <div class="hero__panel-bg hero__panel-bg--dia"></div>
+      <div class="hero__panel-overlay hero__panel-overlay--dia"></div>
+      <div class="hero__sun-glow"></div>
+      <div class="hero__panel-content hero__panel-content--right">
+        <div class="panel__icon">☀</div>
+        <p class="panel__eyebrow"
+           data-es="Pisaq · Valle Sagrado"
+           data-en="Pisaq · Sacred Valley">Pisaq · Valle Sagrado</p>
+        <h2 class="panel__heading"
+            data-es="Templos" data-en="Temples">Templos</h2>
+        <p class="panel__desc"
+           data-es="Intihuatana · Observatorio · Huacas"
+           data-en="Intihuatana · Observatory · Huacas">Intihuatana · Observatorio · Huacas</p>
+        <span class="panel__cta"
+              data-es="Ver programa →" data-en="See program →">Ver programa →</span>
+      </div>
+    </div>
+
+    <!-- ── Contenido central flotante ── -->
+    <div class="hero__center-content">
+      <img src="images/logo.png" alt="Chakana One Travel"
+           class="hero__center-logo" id="logoImg" />
+      <h1 class="hero__title">Capac Inti Raymi</h1>
+      <p class="hero__subtitle"
+         data-es="Gran Fiesta del Sol" data-en="Great Festival of the Sun">Gran Fiesta del Sol</p>
+      <div class="hero__date">
+        <span class="hero__date-month"
+              data-es="Diciembre 2026" data-en="December 2026">Diciembre 2026</span>
+        <span class="hero__date-days">22 — 28</span>
+      </div>
+      <p class="hero__quote"
+         data-es="Aquí los Apus guardan el cielo y tus orígenes."
+         data-en="Here the Apus guard the sky and your origins.">
+        Aquí los Apus guardan el cielo y tus orígenes.
+      </p>
+      <a href="#precio" class="btn btn--gold"
+         data-es="Reservar mi lugar" data-en="Reserve my spot">Reservar mi lugar</a>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════ INTRO ══ -->
+  <section class="intro reveal">
+    <div class="container">
+      <div class="intro__symbol">✦</div>
+      <blockquote class="intro__quote">
+        <span data-es='"La parte en el todo y el todo en la parte"' data-en='"The part in the whole and the whole in the part"'>"La parte en el todo y el todo en la parte"</span>
+      </blockquote>
+      <p class="intro__sub" data-es='"La memoria viva que refleja cómo las estrellas se tejen en la tierra"' data-en='"The living memory that reflects how the stars weave on the earth"'>
+        "La memoria viva que refleja cómo las estrellas se tejen en la tierra"
+      </p>
+      <p class="intro__body" data-es="Un retiro que entrelaza la sabiduría de las plantas maestras, la cosmovisión andina y los templos sagrados. Los Andes y la Amazonía se encuentran en rituales e historias guiadas por abuelas y abuelos, guardianes del Tawantinsuyo." data-en="A retreat that weaves together the wisdom of master plants, the Andean worldview, and sacred temples. The Andes and the Amazon meet in rituals and stories guided by grandmothers and grandfathers, guardians of Tawantinsuyo.">
+        Un retiro que entrelaza la sabiduría de las plantas maestras, la cosmovisión andina y los templos sagrados. Los Andes y la Amazonía se encuentran en rituales e historias guiadas por abuelas y abuelos, guardianes del Tawantinsuyo.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ DIVISOR ══ -->
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 400 40" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="20" x2="170" y2="20" stroke="#C8922A" stroke-width="0.5" opacity="0.4"/>
+      <path d="M185,8 H215 V20 H227 V28 H215 V40 H185 V28 H173 V20 H185 Z" fill="none" stroke="#C8922A" stroke-width="1"/>
+      <line x1="230" y1="20" x2="400" y2="20" stroke="#C8922A" stroke-width="0.5" opacity="0.4"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════ PROGRAMA ══ -->
+  <section class="programa reveal" id="programa">
+    <div class="container">
+      <p class="section-eyebrow" data-es="7 días · 6 noches" data-en="7 days · 6 nights">7 días · 6 noches</p>
+      <h2 class="section-title" data-es="El Programa" data-en="The Program">El Programa</h2>
+      <div class="timeline">
+        <div class="timeline__item reveal-item">
+          <div class="timeline__marker"><span class="timeline__day" data-es="Día" data-en="Day">Día</span><span class="timeline__num">1</span></div>
+          <div class="timeline__content">
+            <h3 data-es="Llegada y Bienvenida" data-en="Arrival & Welcome">Llegada y Bienvenida</h3>
+            <ul>
+              <li data-es="Recepción en Aeropuerto del Cusco" data-en="Reception at Cusco Airport">Recepción en Aeropuerto del Cusco</li>
+              <li data-es="Traslado al Valle Sagrado" data-en="Transfer to the Sacred Valley">Traslado al Valle Sagrado</li>
+              <li data-es="Orientación y adaptación a la altitud" data-en="Orientation and altitude adaptation">Orientación y adaptación a la altitud</li>
+              <li data-es="Ceremonia de bienvenida con fogata y música" data-en="Welcome ceremony with bonfire and music">Ceremonia de bienvenida con fogata y música</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline__item reveal-item">
+          <div class="timeline__marker"><span class="timeline__day" data-es="Día" data-en="Day">Día</span><span class="timeline__num">2</span></div>
+          <div class="timeline__content">
+            <h3 data-es="Baño Floral y Ayahuasca" data-en="Flower Bath & Ayahuasca">Baño Floral y Ayahuasca</h3>
+            <ul>
+              <li data-es="Baño floral tradicional con madres locales" data-en="Traditional flower bath with local mothers">Baño floral tradicional con madres locales</li>
+              <li data-es="Ceremonia de Ayahuasca" data-en="Ayahuasca Ceremony">Ceremonia de Ayahuasca</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline__item reveal-item">
+          <div class="timeline__marker"><span class="timeline__day" data-es="Día" data-en="Day">Día</span><span class="timeline__num">3</span></div>
+          <div class="timeline__content">
+            <h3 data-es="Templos y Observatorio" data-en="Temples & Observatory">Templos y Observatorio</h3>
+            <ul>
+              <li data-es="Caminata a Huchuycosco" data-en="Walk to Huchuycosco">Caminata a Huchuycosco</li>
+              <li data-es="Museo Encarnado" data-en="Incarnate Museum">Museo Encarnado</li>
+              <li data-es="Observatorio Astronómico — Calca" data-en="Astronomical Observatory — Calca">Observatorio Astronómico — Calca</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline__item reveal-item">
+          <div class="timeline__marker"><span class="timeline__day" data-es="Día" data-en="Day">Día</span><span class="timeline__num">4</span></div>
+          <div class="timeline__content">
+            <h3 data-es="Pisaq e Intihuatana" data-en="Pisaq & Intihuatana">Pisaq e Intihuatana</h3>
+            <ul>
+              <li data-es="Pisaq — Intihuatana" data-en="Pisaq — Intihuatana">Pisaq — Intihuatana</li>
+              <li data-es="Wachuma — Fuego Sagrado" data-en="Wachuma — Sacred Fire">Wachuma — Fuego Sagrado</li>
+              <li data-es="Alimentación vegetariana" data-en="Vegetarian meals">Alimentación vegetariana</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline__item reveal-item">
+          <div class="timeline__marker"><span class="timeline__day" data-es="Día" data-en="Day">Día</span><span class="timeline__num">5</span></div>
+          <div class="timeline__content">
+            <h3 data-es="Ausangate" data-en="Ausangate">Ausangate</h3>
+            <ul>
+              <li data-es="Montaña Ausangate" data-en="Ausangate Mountain">Montaña Ausangate</li>
+              <li data-es="Baños termales" data-en="Thermal baths">Baños termales</li>
+              <li data-es="Noche en Ausangate" data-en="Night at Ausangate">Noche en Ausangate</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline__item reveal-item">
+          <div class="timeline__marker"><span class="timeline__day" data-es="Día" data-en="Day">Día</span><span class="timeline__num">6</span></div>
+          <div class="timeline__content">
+            <h3 data-es="Lo Sagrado a lo Sagrado" data-en="Sacred to Sacred">Lo Sagrado a lo Sagrado</h3>
+            <ul>
+              <li data-es="Qispiwara" data-en="Qispiwara">Qispiwara</li>
+              <li data-es="Ceremonia de Ofrenda" data-en="Offering Ceremony">Ceremonia de Ofrenda</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline__item reveal-item">
+          <div class="timeline__marker"><span class="timeline__day" data-es="Día" data-en="Day">Día</span><span class="timeline__num">7</span></div>
+          <div class="timeline__content">
+            <h3 data-es="Koricancha y Regreso" data-en="Koricancha & Departure">Koricancha y Regreso</h3>
+            <ul>
+              <li data-es="Visita al Koricancha" data-en="Visit to the Koricancha">Visita al Koricancha</li>
+              <li data-es="Desayuno en el Cusco" data-en="Breakfast in Cusco">Desayuno en el Cusco</li>
+              <li data-es="Salida a Lima" data-en="Departure to Lima">Salida a Lima</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ DIVISOR ══ -->
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 400 40" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="20" x2="170" y2="20" stroke="#C8922A" stroke-width="0.5" opacity="0.4"/>
+      <path d="M185,8 H215 V20 H227 V28 H215 V40 H185 V28 H173 V20 H185 Z" fill="none" stroke="#C8922A" stroke-width="1"/>
+      <line x1="230" y1="20" x2="400" y2="20" stroke="#C8922A" stroke-width="0.5" opacity="0.4"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════ PLANTAS ══ -->
+  <section class="plantas reveal" id="plantas">
+    <div class="container">
+      <p class="section-eyebrow" data-es="Medicina ancestral" data-en="Ancestral Medicine">Medicina ancestral</p>
+      <h2 class="section-title" data-es="Plantas Sagradas" data-en="Sacred Plants">Plantas Sagradas</h2>
+      <div class="plantas__grid">
+        <div class="planta-card reveal-item">
+          <div class="planta-card__icon">☽</div>
+          <h3 class="planta-card__name">Ayahuasca</h3>
+          <p class="planta-card__subtitle" data-es='"Soga de Muerte"' data-en='"Rope of Death"'>"Soga de Muerte"</p>
+          <p class="planta-card__body" data-es="Planta maestra que nos recuerda la importancia de caminar sin ego. Ayuda a ver el inconsciente, enseñando a observar el mundo interior y reconocerse en el amor." data-en="Master plant that reminds us of the importance of walking without ego. It helps us see our unconscious, teaching people to observe their inner world and recognize themselves in love.">
+            Planta maestra que nos recuerda la importancia de caminar sin ego. Ayuda a ver el inconsciente, enseñando a observar el mundo interior y reconocerse en el amor.
+          </p>
+        </div>
+        <div class="planta-card reveal-item">
+          <div class="planta-card__icon">☀</div>
+          <h3 class="planta-card__name">Wachuma</h3>
+          <p class="planta-card__subtitle" data-es='"Sin Cabeza" en Quechua' data-en='"Headless" in Quechua'>"Sin Cabeza" en Quechua</p>
+          <p class="planta-card__body" data-es="Medicina que nos conecta con los cuatro abuelos: agua, fuego, tierra y aire. A través de ella, uno entra en la Madre Naturaleza y la vibración del Padre Espíritu, dejando de lado la mente para sentir con el corazón." data-en="Medicine that connects us with the four grandparents: water, fire, earth, and air. Through it, one enters into Mother Nature and the vibration of Father Spirit, setting aside the mind to feel with the heart.">
+            Medicina que nos conecta con los cuatro abuelos: agua, fuego, tierra y aire. A través de ella, uno entra en la Madre Naturaleza y la vibración del Padre Espíritu, dejando de lado la mente para sentir con el corazón.
+          </p>
+        </div>
+      </div>
+      <p class="plantas__cite">
+        <em data-es='"Las plantas son las primeras formas de vida, la base para el desarrollo de los niveles de conciencia..." — Evans y Hofmann, 2000' data-en='"Plants are the first forms of life, the basis for the development of levels of consciousness..." — Evans and Hofmann, 2000'>
+          "Las plantas son las primeras formas de vida, la base para el desarrollo de los niveles de conciencia..." — Evans y Hofmann, 2000
+        </em>
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ LUGAR ══ -->
+  <section class="lugar reveal" id="lugar">
+    <div class="container">
+      <p class="section-eyebrow" data-es="Nuestro espacio" data-en="Our venue">Nuestro espacio</p>
+      <h2 class="section-title" data-es="Lovely Heart" data-en="Lovely Heart">Lovely Heart</h2>
+      <p class="lugar__location">Calca — Cusco, Perú</p>
+      <p class="lugar__body" data-es="Un espacio de retiro enriquecedor que inspira sanación, transformación y cambio positivo en el Valle Sagrado del Perú. Rodeado de Apus, con vistas a las montañas sagradas." data-en="An enriching retreat space that inspires healing, transformation, and positive change in Peru's Sacred Valley. Surrounded by Apus, with views of the sacred mountains.">
+        Un espacio de retiro enriquecedor que inspira sanación, transformación y cambio positivo en el Valle Sagrado del Perú. Rodeado de Apus, con vistas a las montañas sagradas.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ DIVISOR ══ -->
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 400 40" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="20" x2="170" y2="20" stroke="#C8922A" stroke-width="0.5" opacity="0.4"/>
+      <path d="M185,8 H215 V20 H227 V28 H215 V40 H185 V28 H173 V20 H185 Z" fill="none" stroke="#C8922A" stroke-width="1"/>
+      <line x1="230" y1="20" x2="400" y2="20" stroke="#C8922A" stroke-width="0.5" opacity="0.4"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════ GALERÍA ══ -->
+  <section class="galeria reveal" id="galeria">
+    <div class="container">
+      <p class="section-eyebrow" data-es="Momentos del retiro" data-en="Retreat moments">Momentos del retiro</p>
+      <h2 class="section-title" data-es="Galería" data-en="Gallery">Galería</h2>
+      <div class="galeria__grid">
+
+        <div class="galeria__item reveal-item" data-index="0">
+          <img src="images/gallery/ausangate.jpg" alt="Nevado Ausangate" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Nevado Ausangate · Apu Mayor" data-en="Ausangate Mountain · Great Apu">Nevado Ausangate · Apu Mayor</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="1">
+          <img src="images/gallery/aramu-muru.jpg" alt="Aramu Muru" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Aramu Muru · Portal Sagrado" data-en="Aramu Muru · Sacred Portal">Aramu Muru · Portal Sagrado</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="2">
+          <img src="images/gallery/ceremonia-ayahuasca.jpg" alt="Ceremonia de Ayahuasca" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Ceremonia de Ayahuasca" data-en="Ayahuasca Ceremony">Ceremonia de Ayahuasca</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="3">
+          <img src="images/gallery/retiro-01.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Capac Inti Raymi · Valle Sagrado" data-en="Capac Inti Raymi · Sacred Valley">Capac Inti Raymi · Valle Sagrado</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="4">
+          <img src="images/gallery/retiro-02.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Ritual Andino" data-en="Andean Ritual">Ritual Andino</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="5">
+          <img src="images/gallery/retiro-03.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Medicina Ancestral" data-en="Ancestral Medicine">Medicina Ancestral</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="6">
+          <img src="images/gallery/retiro-04.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Fuego Sagrado" data-en="Sacred Fire">Fuego Sagrado</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="7">
+          <img src="images/gallery/retiro-05.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Comunidad y Sanación" data-en="Community & Healing">Comunidad y Sanación</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="8">
+          <img src="images/gallery/retiro-06.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Templos del Tawantinsuyo" data-en="Temples of the Tawantinsuyo">Templos del Tawantinsuyo</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="9">
+          <img src="images/gallery/retiro-07.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Pisaq · Intihuatana" data-en="Pisaq · Intihuatana">Pisaq · Intihuatana</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="10">
+          <img src="images/gallery/retiro-08.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Wachuma · Fuego Sagrado" data-en="Wachuma · Sacred Fire">Wachuma · Fuego Sagrado</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="11">
+          <img src="images/gallery/retiro-09.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Valle Sagrado · Calca" data-en="Sacred Valley · Calca">Valle Sagrado · Calca</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="12">
+          <img src="images/gallery/retiro-10.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Ceremonia de Ofrenda" data-en="Offering Ceremony">Ceremonia de Ofrenda</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="13">
+          <img src="images/gallery/retiro-11.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Baño Floral Tradicional" data-en="Traditional Flower Bath">Baño Floral Tradicional</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="14">
+          <img src="images/gallery/retiro-12.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Apus del Cusco" data-en="Apus of Cusco">Apus del Cusco</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="15">
+          <img src="images/gallery/heic-01.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Koricancha · Templo del Sol" data-en="Koricancha · Temple of the Sun">Koricancha · Templo del Sol</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="16">
+          <img src="images/gallery/heic-02.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Huchuycosco · Caminata Sagrada" data-en="Huchuycosco · Sacred Walk">Huchuycosco · Caminata Sagrada</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="17">
+          <img src="images/gallery/heic-03.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Qispiwara · Santuario" data-en="Qispiwara · Sanctuary">Qispiwara · Santuario</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="18">
+          <img src="images/gallery/heic-04.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Observatorio Astronómico" data-en="Astronomical Observatory">Observatorio Astronómico</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="19">
+          <img src="images/gallery/heic-05.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Baños Termales · Ausangate" data-en="Thermal Baths · Ausangate">Baños Termales · Ausangate</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="20">
+          <img src="images/gallery/heic-06.jpg" alt="Retiro" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Sagrada Naturaleza Andina" data-en="Sacred Andean Nature">Sagrada Naturaleza Andina</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="21">
+          <img src="images/gallery/libro-genesis.jpg" alt="Génesis de la Cultura Andina" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Génesis de la Cultura Andina" data-en="Genesis of Andean Culture">Génesis de la Cultura Andina</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="22">
+          <img src="images/gallery/estela-raimondi.jpg" alt="Estela Raimondi" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Estela Raimondi · Tiahuanaco" data-en="Raimondi Stela · Tiahuanaco">Estela Raimondi · Tiahuanaco</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="23">
+          <img src="images/gallery/sagrado-01.jpg" alt="Valle Sagrado" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Visión del Valle Sagrado" data-en="View of the Sacred Valley">Visión del Valle Sagrado</span>
+          </div>
+        </div>
+
+
+        <div class="galeria__item reveal-item" data-index="24">
+          <img src="images/gallery/nuevo-01.jpg" alt="Valle Sagrado" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Valle Sagrado · Amanecer" data-en="Sacred Valley · Dawn">Valle Sagrado · Amanecer</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="25">
+          <img src="images/gallery/nuevo-02.jpg" alt="Paisaje Andino" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Paisaje Andino · Tawantinsuyo" data-en="Andean Landscape · Tawantinsuyo">Paisaje Andino · Tawantinsuyo</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="26">
+          <img src="images/gallery/nuevo-03.jpg" alt="Montañas Sagradas" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Montañas Sagradas · Cusco" data-en="Sacred Mountains · Cusco">Montañas Sagradas · Cusco</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="27">
+          <img src="images/gallery/nuevo-04.jpg" alt="Andes" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Los Andes · Tierra Sagrada" data-en="The Andes · Sacred Land">Los Andes · Tierra Sagrada</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="28">
+          <img src="images/gallery/nuevo-05.jpg" alt="Wiracocha" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Wiracocha · Dios Creador" data-en="Wiracocha · Creator God">Wiracocha · Dios Creador</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="29">
+          <img src="images/gallery/nuevo-06.jpg" alt="Llama andina" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Llama · Compañera del Ande" data-en="Llama · Andean Companion">Llama · Compañera del Ande</span>
+          </div>
+        </div>
+
+        <div class="galeria__item reveal-item" data-index="30">
+          <img src="images/gallery/nuevo-07.jpg" alt="Ceremonia" loading="lazy" />
+          <div class="galeria__overlay">
+            <span class="galeria__caption" data-es="Ceremonia · Fuego Sagrado" data-en="Ceremony · Sacred Fire">Ceremonia · Fuego Sagrado</span>
+          </div>
+        </div>
+
+      </div><!-- /.galeria__grid -->
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+    <div class="lightbox__backdrop" id="lightboxBackdrop"></div>
+    <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar">✕</button>
+    <button class="lightbox__prev" id="lightboxPrev" aria-label="Anterior">‹</button>
+    <button class="lightbox__next" id="lightboxNext" aria-label="Siguiente">›</button>
+    <div class="lightbox__stage">
+      <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+      <p class="lightbox__caption" id="lightboxCaption"></p>
+      <p class="lightbox__counter" id="lightboxCounter"></p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ DIVISOR ══ -->
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 400 40" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="20" x2="170" y2="20" stroke="#C8922A" stroke-width="0.5" opacity="0.4"/>
+      <path d="M185,8 H215 V20 H227 V28 H215 V40 H185 V28 H173 V20 H185 Z" fill="none" stroke="#C8922A" stroke-width="1"/>
+      <line x1="230" y1="20" x2="400" y2="20" stroke="#C8922A" stroke-width="0.5" opacity="0.4"/>
+    </svg>
+  </div>
+
+  <!-- ═══════════════════ PRECIO + PAGO ══ -->
+  <section class="precio reveal" id="precio">
+    <div class="container">
+      <p class="section-eyebrow" data-es="Inversión" data-en="Investment">Inversión</p>
+      <h2 class="section-title" data-es="Únete al Retiro" data-en="Join the Retreat">Únete al Retiro</h2>
+
+      <div class="precio__card">
+
+        <!-- Monto -->
+        <div class="precio__amount">
+          <span class="precio__currency">USD</span>
+          <span class="precio__number">2,500</span>
+          <span class="precio__per" data-es="por persona" data-en="per person">por persona</span>
+        </div>
+
+        <!-- Incluye -->
+        <ul class="precio__includes">
+          <li data-es="6 días y 7 noches de alojamiento" data-en="6 days and 7 nights accommodation">6 días y 7 noches de alojamiento</li>
+          <li data-es="Todas las ceremonias incluidas" data-en="All ceremonies included">Todas las ceremonias incluidas</li>
+          <li data-es="Alimentación completa" data-en="Full meals">Alimentación completa</li>
+          <li data-es="Entrada a Huacas y museo" data-en="Entry to Huacas and museum">Entrada a Huacas y museo</li>
+          <li data-es="Transporte los 7 días" data-en="Transport for 7 days">Transporte los 7 días</li>
+        </ul>
+
+        <!-- Pasos de pago -->
+        <div class="precio__payment">
+          <div class="precio__step">
+            <span class="precio__step-num">01</span>
+            <div>
+              <strong data-es="50% ahora — Junio 2026" data-en="50% now — June 2026">50% ahora — Junio 2026</strong>
+              <p data-es="Reserva tu lugar con USD 1,250" data-en="Reserve your spot with USD 1,250">Reserva tu lugar con USD 1,250</p>
+            </div>
+          </div>
+          <div class="precio__step">
+            <span class="precio__step-num">02</span>
+            <div>
+              <strong data-es="50% restante — Diciembre 2026" data-en="50% remaining — December 2026">50% restante — Diciembre 2026</strong>
+              <p data-es="Al llegar al retiro · USD 1,250" data-en="Upon arrival at the retreat · USD 1,250">Al llegar al retiro · USD 1,250</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ OPCIONES DE PAGO ═══ -->
+        <div class="pago__tabs">
+          <button class="pago__tab active" data-tab="transferencia"
+            data-es="Transferencia bancaria" data-en="Bank transfer">Transferencia bancaria</button>
+          <button class="pago__tab" data-tab="whatsapp"
+            data-es="Reservar por WhatsApp" data-en="Reserve via WhatsApp">Reservar por WhatsApp</button>
+        </div>
+
+        <!-- Tab: Transferencia -->
+        <div class="pago__panel active" id="tab-transferencia">
+          <p class="pago__intro" data-es="Realiza la transferencia del 50% (USD 1,250) a la siguiente cuenta y envía tu comprobante por WhatsApp para confirmar tu reserva." data-en="Transfer 50% (USD 1,250) to the following account and send your receipt via WhatsApp to confirm your spot.">
+            Realiza la transferencia del 50% (USD&nbsp;1,250) a la siguiente cuenta y envía tu comprobante por WhatsApp para confirmar tu reserva.
+          </p>
+
+          <div class="banco__card">
+            <div class="banco__row">
+              <span class="banco__label" data-es="Banco" data-en="Bank">Banco</span>
+              <span class="banco__value">Interbank</span>
+              <button class="copy-btn" data-copy="Interbank" aria-label="Copiar banco">⎘</button>
+            </div>
+            <div class="banco__row">
+              <span class="banco__label" data-es="Titular" data-en="Account holder">Titular</span>
+              <span class="banco__value">Zadir Kurmi Arturo Milla Silva</span>
+              <button class="copy-btn" data-copy="Zadir Kurmi Arturo Milla Silva" aria-label="Copiar nombre">⎘</button>
+            </div>
+            <div class="banco__row banco__row--highlight">
+              <span class="banco__label" data-es="Cuenta Soles" data-en="Soles Account">Cuenta Soles</span>
+              <span class="banco__value banco__value--mono">1413216700826</span>
+              <button class="copy-btn" data-copy="1413216700826" aria-label="Copiar cuenta">⎘</button>
+            </div>
+            <div class="banco__row">
+              <span class="banco__label">CCI</span>
+              <span class="banco__value banco__value--mono">00314101321670082698</span>
+              <button class="copy-btn" data-copy="00314101321670082698" aria-label="Copiar CCI">⎘</button>
+            </div>
+            <div class="banco__row">
+              <span class="banco__label" data-es="Monto a transferir" data-en="Amount to transfer">Monto a transferir</span>
+              <span class="banco__value banco__value--gold">USD 1,250 <span class="banco__note" data-es="(50% de reserva)" data-en="(50% deposit)">(50% de reserva)</span></span>
+              <button class="copy-btn" data-copy="1250" aria-label="Copiar monto">⎘</button>
+            </div>
+          </div>
+
+          <a href="https://wa.me/51949745661?text=Hola%20Kurmi%2C%20acabo%20de%20realizar%20la%20transferencia%20del%2050%25%20para%20el%20Capac%20Inti%20Raymi%20%E2%80%94%20Diciembre%202026.%20Adjunto%20mi%20comprobante."
+             class="btn btn--gold btn--large" target="_blank" rel="noopener"
+             data-es="Enviar comprobante por WhatsApp" data-en="Send receipt via WhatsApp">
+            Enviar comprobante por WhatsApp
+          </a>
+        </div>
+
+        <!-- Tab: WhatsApp -->
+        <div class="pago__panel" id="tab-whatsapp">
+          <p class="pago__intro" data-es="Escríbenos directamente y te guiamos en el proceso de reserva paso a paso." data-en="Message us directly and we'll guide you through the reservation process step by step.">
+            Escríbenos directamente y te guiamos en el proceso de reserva paso a paso.
+          </p>
+          <div class="whatsapp__card">
+            <div class="whatsapp__icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.532 5.858L.057 23.486a.5.5 0 00.612.612l5.628-1.475A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.953 9.953 0 01-5.119-1.417l-.367-.218-3.797.995.994-3.797-.219-.367A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+              </svg>
+            </div>
+            <div class="whatsapp__info">
+              <p class="whatsapp__name">Kurmi Milla Silva</p>
+              <p class="whatsapp__num">+51 949 745 661</p>
+            </div>
+          </div>
+          <a href="https://wa.me/51949745661?text=Hola%20Kurmi%2C%20quiero%20reservar%20mi%20lugar%20en%20el%20Capac%20Inti%20Raymi%20%E2%80%94%20Diciembre%202026.%20%C2%BFMe%20puedes%20guiar%20con%20el%20proceso%20de%20pago%3F"
+             class="btn btn--gold btn--large" target="_blank" rel="noopener"
+             data-es="Escribir a WhatsApp ahora" data-en="Message WhatsApp now">
+            Escribir a WhatsApp ahora
+          </a>
+        </div>
+
+        <!-- Toast de copiado -->
+        <div class="copy-toast" id="copyToast" data-es="¡Copiado!" data-en="Copied!">¡Copiado!</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo">
+        <img src="images/logo.png" alt="Chakana One Travel" class="footer__logo-img" id="footerLogoImg" />
+        <span class="footer__brand">Chakana One Travel</span>
+      </div>
+      <p class="footer__tagline" data-es="Guardianes del camino andino" data-en="Guardians of the Andean path">Guardianes del camino andino</p>
+      <div class="footer__contact">
+        <a href="https://wa.me/51949745661" target="_blank" rel="noopener" class="footer__wa">
+          WhatsApp: +51 949 745 661
+        </a>
+      </div>
+      <p class="footer__copy">© 2026 Chakana One Travel · Valle Sagrado, Cusco, Perú</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
