@@ -244,11 +244,11 @@ ul { list-style: none; }
 .hero__panel:hover .hero__panel-bg { transform: scale(1.06); }
 
 .hero__panel-bg--noche {
-  background-image: url('../images/hero-dia.jpg');
+  background-image: url('../images/hero-noche.jpg');
   background-position: center 35%;
 }
 .hero__panel-bg--dia {
-  background-image: url('../images/hero-noche.jpg');
+  background-image: url('../images/hero-dia.jpg');
   background-position: center center;
 }
 
