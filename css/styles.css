@@ -1562,3 +1562,323 @@ ul { list-style: none; }
   .hero__title { font-size: clamp(2rem, 8vw, 4rem); }
   .hero__date-days { font-size: 1.6rem; }
 }
+
+/* ══════════════════════════════════════════════════════
+   RESPONSIVE MÓVIL COMPLETO
+   Breakpoints: 768px (tablet) · 480px (móvil)
+══════════════════════════════════════════════════════ */
+
+/* ── HERO MÓVIL — ajustes adicionales ─────────────── */
+@media (max-width: 768px) {
+  /* Cada panel ocupa 50% de altura */
+  .hero__panel { min-height: 50vh; }
+
+  /* Centro: logo + título centrado en la línea divisoria */
+  .hero__center-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 92vw;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .hero__title {
+    font-size: clamp(1.6rem, 6vw, 2.8rem);
+    letter-spacing: 0.12em;
+  }
+
+  .hero__subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+  }
+
+  .hero__date { font-size: 0.65rem; }
+  .hero__date-days { font-size: 1.4rem; }
+
+  .hero__quote {
+    display: none; /* ocultar en móvil para limpiar */
+  }
+
+  .hero__cta {
+    padding: 0.85rem 1.8rem;
+    font-size: 0.72rem;
+  }
+
+  /* Contenido de cada panel: esquinas */
+  .hero__panel-content {
+    bottom: 1rem;
+    left: 1rem;
+  }
+  .hero__panel-content--right {
+    bottom: 1rem;
+    right: 1rem;
+    left: auto;
+    text-align: right;
+  }
+
+  .hero__panel-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+  }
+  .hero__panel-title { font-size: 1rem; }
+  .hero__panel-sub { font-size: 0.65rem; }
+  .hero__panel-link { font-size: 0.6rem; }
+}
+
+/* ── CONTENEDOR GENERAL ────────────────────────────── */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Headings de sección */
+  .section-title {
+    font-size: clamp(1.5rem, 6vw, 2.4rem);
+    letter-spacing: 0.1em;
+  }
+  .section-subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+  }
+
+  /* Spacings de secciones */
+  .intro,
+  .programa,
+  .plantas,
+  .lugar,
+  .galeria,
+  .pago {
+    padding-top: clamp(3rem, 8vw, 5rem);
+    padding-bottom: clamp(3rem, 8vw, 5rem);
+  }
+}
+
+/* ── INTRO / CITAS ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .intro__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .intro__quote-block {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .intro__quote {
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
+  }
+
+  .intro__features {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .intro__feature-num {
+    font-size: 2rem;
+  }
+}
+
+/* ── PROGRAMA — TIMELINE ───────────────────────────── */
+@media (max-width: 768px) {
+  .timeline { padding-left: 0; }
+
+  .timeline::before {
+    left: 1.2rem;
+  }
+
+  .timeline__item {
+    grid-template-columns: 3rem 1fr;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline__day {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.55rem;
+  }
+
+  .timeline__day-num { font-size: 1.1rem; }
+
+  .timeline__title { font-size: 1rem; }
+
+  .timeline__activities {
+    font-size: 0.8rem;
+    gap: 0.3rem;
+  }
+}
+
+/* ── PLANTAS SAGRADAS ──────────────────────────────── */
+@media (max-width: 768px) {
+  .plantas__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .plantas__card {
+    padding: 2rem 1.5rem;
+  }
+
+  .plantas__symbol { font-size: 2rem; }
+  .plantas__name { font-size: 1.5rem; }
+  .plantas__body { font-size: 0.85rem; }
+
+  .plantas__quote-block {
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+
+  .plantas__quote {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+}
+
+/* ── LUGAR ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .lugar__body {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .lugar__name { font-size: clamp(1.8rem, 6vw, 2.5rem); }
+  .lugar__tagline { font-size: 0.65rem; }
+  .lugar__desc { font-size: 0.88rem; }
+
+  .lugar__features {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+}
+
+/* ── PRECIO / PAGO ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .pago__card {
+    padding: 2rem 1.25rem;
+  }
+
+  .pago__price-amount {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  }
+
+  .pago__includes {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .pago__steps {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .banco__row {
+    grid-template-columns: auto 1fr auto;
+    gap: 0.5rem;
+    padding: 0.75rem 0.75rem;
+    align-items: start;
+  }
+
+  .banco__label { font-size: 0.65rem; }
+  .banco__value--mono { font-size: 0.75rem; word-break: break-all; }
+
+  .copy-btn {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.65rem;
+  }
+
+  .whatsapp__btn {
+    padding: 1rem 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  .pago__tabs { grid-template-columns: 1fr; }
+  .pago__tab:first-child {
+    border-right: none;
+    border-bottom: 1px solid rgba(200,146,42,0.2);
+  }
+}
+
+/* ── GALERÍA MÓVIL ─────────────────────────────────── */
+@media (max-width: 480px) {
+  .galeria__grid { columns: 1; }
+
+  .lightbox__img {
+    max-height: 70vh;
+    object-fit: contain;
+  }
+
+  .lightbox__prev,
+  .lightbox__next {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+  .lightbox__prev { left: 0.25rem; }
+  .lightbox__next { right: 0.25rem; }
+
+  .lightbox__footer {
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .lightbox__caption { font-size: 0.75rem; }
+  .lightbox__counter { font-size: 0.7rem; }
+}
+
+/* ── NAV MÓVIL adicional ───────────────────────────── */
+@media (max-width: 480px) {
+  .nav__logo-img { height: 32px; }
+  .nav { padding: 0 1rem; }
+
+  .nav__links {
+    gap: 2rem;
+  }
+
+  .nav__link { font-size: 1rem; }
+
+  .lang-toggle {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* ── FOOTER MÓVIL ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1.25rem 2rem;
+    text-align: center;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .footer__logo { margin: 0 auto; }
+
+  .footer__links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1.5rem;
+  }
+
+  .footer__copy { font-size: 0.72rem; }
+}
+
+/* ── TOUCH — sin hover effects en móvil ────────────── */
+@media (hover: none) {
+  .hero__panel:hover { flex: 1 !important; }
+  .hero:has(.hero__panel:hover) .hero__panel:not(:hover) { flex: 1 !important; }
+
+  .hero__panel-content,
+  .hero__panel-content--right {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .galeria__item:hover img { transform: none; }
+  .galeria__item:hover .galeria__overlay { opacity: 0; }
+}
