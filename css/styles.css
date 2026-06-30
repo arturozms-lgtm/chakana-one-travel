@@ -1567,7 +1567,14 @@ ul { list-style: none; }
   .hero__center-content { order: 3; }
   .hero__panel--dia { order: 4; }
 
-  /* Centro: saca del absolute flow, pasa a bloque entre paneles */
+  /* Hero: imagen de estrellas como fondo en móvil */
+  .hero {
+    background-image: url('../images/hero-noche.jpg');
+    background-size: cover;
+    background-position: 90% 20%;
+  }
+
+  /* Centro: flota sobre las estrellas con fondo semitransparente */
   .hero__center-content {
     position: relative;
     top: auto;
@@ -1575,9 +1582,11 @@ ul { list-style: none; }
     transform: none;
     width: 100%;
     text-align: center;
-    background: var(--c-bg);
+    background: rgba(14, 12, 7, 0.45);
     padding: 2.5rem 1.5rem 2.75rem;
     z-index: 10;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
   }
 
   .hero__center-logo  { height: 52px; margin-bottom: 1.25rem; }
