@@ -306,6 +306,115 @@
 
   })();
 
+  /* ── Barra de progreso + volver arriba ────────────── */
+  (function () {
+    const bar   = document.getElementById('scrollProgress');
+    const fabTop = document.getElementById('fabTop');
+    let ticking = false;
+
+    function update() {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+      if (bar) bar.style.width = pct + '%';
+      if (fabTop) fabTop.classList.toggle('show', h.scrollTop > 600);
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    update();
+
+    fabTop && fabTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+
+  /* ── Scrollspy — nav activo ───────────────────────── */
+  (function () {
+    const links = Array.from(document.querySelectorAll('.nav__link[href^="#"]'));
+    if (!links.length) return;
+    const map = links
+      .map(l => ({ link: l, section: document.querySelector(l.getAttribute('href')) }))
+      .filter(x => x.section);
+    if (!map.length) return;
+
+    const spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          const id = '#' + entry.target.id;
+          links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === id));
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+    map.forEach(x => spy.observe(x.section));
+  })();
+
+  /* ── Cuenta regresiva al retiro ───────────────────── */
+  (function () {
+    const cd = document.getElementById('countdown');
+    if (!cd) return;
+    // Inicio del Capac Inti Raymi: 22 diciembre 2026, 00:00 (hora Perú, UTC-5)
+    const target = new Date('2026-12-22T00:00:00-05:00').getTime();
+    const out = {
+      days:    cd.querySelector('[data-cd="days"]'),
+      hours:   cd.querySelector('[data-cd="hours"]'),
+      minutes: cd.querySelector('[data-cd="minutes"]'),
+      seconds: cd.querySelector('[data-cd="seconds"]')
+    };
+    const pad = n => String(n).padStart(2, '0');
+
+    function tick() {
+      const diff = target - Date.now();
+      if (diff <= 0) {
+        out.days.textContent = out.hours.textContent =
+        out.minutes.textContent = out.seconds.textContent = '00';
+        clearInterval(timer);
+        return;
+      }
+      const s = Math.floor(diff / 1000);
+      out.days.textContent    = pad(Math.floor(s / 86400));
+      out.hours.textContent   = pad(Math.floor((s % 86400) / 3600));
+      out.minutes.textContent = pad(Math.floor((s % 3600) / 60));
+      out.seconds.textContent = pad(s % 60);
+    }
+    tick();
+    const timer = setInterval(tick, 1000);
+  })();
+
+  /* ── Contadores animados (cifras) ─────────────────── */
+  (function () {
+    const nums = Array.from(document.querySelectorAll('.stat__num[data-count]'));
+    if (!nums.length) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function animate(el) {
+      const end = parseInt(el.getAttribute('data-count'), 10) || 0;
+      const suffix = el.getAttribute('data-suffix') || '';
+      if (reduce) { el.textContent = end + suffix; return; }
+      const dur = 1200;
+      const start = performance.now();
+      function step(now) {
+        const p = Math.min((now - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+        el.textContent = Math.round(eased * end) + (p === 1 ? suffix : '');
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && !entry.target.dataset.done) {
+          entry.target.dataset.done = '1';
+          animate(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    nums.forEach(n => io.observe(n));
+  })();
+
   /* ── Init ─────────────────────────────────────────── */
   applyLang('es');
 

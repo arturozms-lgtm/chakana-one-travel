@@ -244,11 +244,11 @@ ul { list-style: none; }
 .hero__panel:hover .hero__panel-bg { transform: scale(1.06); }
 
 .hero__panel-bg--noche {
-  background-image: url('../images/hero-noche.jpg');
+  background-image: url('../images/hero-noche.webp');
   background-position: 90% 20%;
 }
 .hero__panel-bg--dia {
-  background-image: url('../images/hero-dia.jpg');
+  background-image: url('../images/hero-dia.webp');
   background-position: center center;
 }
 
@@ -580,7 +580,7 @@ ul { list-style: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../images/bg-wiracocha.jpg');
+  background-image: url('../images/bg-wiracocha.webp');
   background-size: cover;
   background-position: center;
   opacity: 0.08;
@@ -810,7 +810,7 @@ ul { list-style: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../images/bg-ausangate.jpg');
+  background-image: url('../images/bg-ausangate.webp');
   background-size: cover;
   background-position: center 40%;
   opacity: 0.12;
@@ -1569,7 +1569,7 @@ ul { list-style: none; }
 
   /* Hero: imagen de estrellas como fondo en móvil */
   .hero {
-    background-image: url('../images/hero-noche.jpg');
+    background-image: url('../images/hero-noche.webp');
     background-size: cover;
     background-position: 90% 20%;
   }
@@ -1916,4 +1916,209 @@ ul { list-style: none; }
 
   .galeria__item:hover img { transform: none; }
   .galeria__item:hover .galeria__overlay { opacity: 0; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   MEJORAS INTERACTIVAS — 2026
+   Barra de progreso · Nav activo · Cuenta regresiva ·
+   Cifras · Acciones flotantes
+═══════════════════════════════════════════════════════ */
+
+/* ── Barra de progreso de scroll ───────────────────── */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  z-index: 200;
+  background: linear-gradient(90deg, var(--c-gold-dk), var(--c-gold), var(--c-gold-lt));
+  box-shadow: 0 0 12px rgba(200, 146, 42, 0.6);
+  transition: width 0.1s linear;
+}
+
+/* ── Estado activo de navegación (scrollspy) ───────── */
+.nav__link {
+  position: relative;
+  padding-bottom: 2px;
+}
+.nav__link::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 0; height: 1.5px;
+  background: var(--c-gold);
+  transition: width var(--transition);
+}
+.nav__link:hover::after,
+.nav__link.active::after { width: 100%; }
+.nav__link.active { color: var(--c-gold); }
+
+/* ── Cuenta regresiva ──────────────────────────────── */
+.countdown {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: -0.5rem 0 1.75rem;
+  pointer-events: none;
+}
+.countdown__unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 3.2rem;
+}
+.countdown__num {
+  font-family: var(--f-display);
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  font-weight: 600;
+  color: var(--c-white);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.5);
+}
+.countdown__label {
+  font-family: var(--f-util);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-top: 0.35rem;
+}
+.countdown__sep {
+  font-family: var(--f-display);
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  color: var(--c-gold-dk);
+  line-height: 1.1;
+  animation: cdBlink 1.6s steps(1) infinite;
+}
+@keyframes cdBlink { 50% { opacity: 0.25; } }
+
+/* ── Franja de cifras ──────────────────────────────── */
+.stats {
+  padding: 3.5rem 0;
+  border-top: 1px solid rgba(200, 146, 42, 0.12);
+  border-bottom: 1px solid rgba(200, 146, 42, 0.12);
+  background: var(--c-bg-2);
+}
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: relative;
+}
+.stat + .stat::before {
+  content: '';
+  position: absolute;
+  left: -0.75rem; top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(200, 146, 42, 0.18);
+}
+.stat__num {
+  font-family: var(--f-display);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  color: var(--c-gold);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.stat__label {
+  font-family: var(--f-util);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-mist);
+}
+
+/* ── Acciones flotantes (WhatsApp + volver arriba) ── */
+.fab {
+  position: fixed;
+  right: clamp(1rem, 3vw, 1.75rem);
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 150;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+  transition: transform var(--transition), opacity var(--transition), background var(--transition);
+}
+.fab:hover { transform: translateY(-3px) scale(1.05); }
+
+.fab--wa {
+  bottom: clamp(1rem, 3vw, 1.75rem);
+  background: #25D366;
+  color: #fff;
+  animation: fabPulse 2.6s ease-out infinite;
+}
+@keyframes fabPulse {
+  0%   { box-shadow: 0 8px 28px rgba(0,0,0,0.45), 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70%  { box-shadow: 0 8px 28px rgba(0,0,0,0.45), 0 0 0 16px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 8px 28px rgba(0,0,0,0.45), 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.fab--wa::after {
+  content: attr(data-tip-es);
+  position: absolute;
+  right: 4rem;
+  white-space: nowrap;
+  background: rgba(14, 12, 7, 0.95);
+  color: var(--c-white);
+  font-family: var(--f-util);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--c-gold-dk);
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(8px);
+  transition: opacity var(--transition), transform var(--transition);
+}
+html[lang="en"] .fab--wa::after { content: attr(data-tip-en); }
+.fab--wa:hover::after { opacity: 1; transform: translateX(0); }
+
+.fab--top {
+  bottom: clamp(5rem, 10vw, 6.5rem);
+  background: var(--c-gold);
+  color: var(--c-bg);
+  font-size: 1.4rem;
+  font-family: var(--f-util);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.fab--top.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+/* ── Responsive cifras + countdown ─────────────────── */
+@media (max-width: 768px) {
+  .stats__grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 1rem; }
+  .stat:nth-child(3)::before { display: none; }
+  .countdown { gap: 0.35rem; }
+  .countdown__unit { min-width: 2.6rem; }
+}
+@media (max-width: 400px) {
+  .countdown__sep { display: none; }
+  .countdown { gap: 0.5rem; }
+}
+
+/* ── Respetar prefers-reduced-motion ───────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress { transition: none; }
+  .countdown__sep { animation: none; }
+  .fab, .fab--wa { animation: none; transition: none; }
+  .fab:hover { transform: none; }
 }

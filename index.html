@@ -12,6 +12,9 @@
 </head>
 <body>
 
+  <!-- ═══════════════════ BARRA DE PROGRESO DE SCROLL ══ -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <!-- ═══════════════════ NAV ══ -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
@@ -99,6 +102,30 @@
               data-es="Diciembre 2026" data-en="December 2026">Diciembre 2026</span>
         <span class="hero__date-days">22 — 28</span>
       </div>
+
+      <!-- ── Cuenta regresiva al retiro ── -->
+      <div class="countdown" id="countdown" role="timer" aria-label="Cuenta regresiva">
+        <div class="countdown__unit">
+          <span class="countdown__num" data-cd="days">—</span>
+          <span class="countdown__label" data-es="Días" data-en="Days">Días</span>
+        </div>
+        <span class="countdown__sep">:</span>
+        <div class="countdown__unit">
+          <span class="countdown__num" data-cd="hours">—</span>
+          <span class="countdown__label" data-es="Horas" data-en="Hours">Horas</span>
+        </div>
+        <span class="countdown__sep">:</span>
+        <div class="countdown__unit">
+          <span class="countdown__num" data-cd="minutes">—</span>
+          <span class="countdown__label" data-es="Min" data-en="Min">Min</span>
+        </div>
+        <span class="countdown__sep">:</span>
+        <div class="countdown__unit">
+          <span class="countdown__num" data-cd="seconds">—</span>
+          <span class="countdown__label" data-es="Seg" data-en="Sec">Seg</span>
+        </div>
+      </div>
+
       <p class="hero__quote"
          data-es="Aquí los Apus guardan el cielo y tus orígenes."
          data-en="Here the Apus guard the sky and your origins.">
@@ -123,6 +150,30 @@
       <p class="intro__body" data-es="Un retiro que entrelaza la sabiduría de las plantas maestras, la cosmovisión andina y los templos sagrados. Los Andes y la Amazonía se encuentran en rituales e historias guiadas por abuelas y abuelos, guardianes del Tawantinsuyo." data-en="A retreat that weaves together the wisdom of master plants, the Andean worldview, and sacred temples. The Andes and the Amazon meet in rituals and stories guided by grandmothers and grandfathers, guardians of Tawantinsuyo.">
         Un retiro que entrelaza la sabiduría de las plantas maestras, la cosmovisión andina y los templos sagrados. Los Andes y la Amazonía se encuentran en rituales e historias guiadas por abuelas y abuelos, guardianes del Tawantinsuyo.
       </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CIFRAS / TRUST ══ -->
+  <section class="stats reveal" aria-label="El retiro en cifras">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stat reveal-item">
+          <span class="stat__num" data-count="7" data-suffix="">0</span>
+          <span class="stat__label" data-es="Días de retiro" data-en="Days of retreat">Días de retiro</span>
+        </div>
+        <div class="stat reveal-item">
+          <span class="stat__num" data-count="6" data-suffix="">0</span>
+          <span class="stat__label" data-es="Noches sagradas" data-en="Sacred nights">Noches sagradas</span>
+        </div>
+        <div class="stat reveal-item">
+          <span class="stat__num" data-count="2" data-suffix="">0</span>
+          <span class="stat__label" data-es="Plantas maestras" data-en="Master plants">Plantas maestras</span>
+        </div>
+        <div class="stat reveal-item">
+          <span class="stat__num" data-count="8" data-suffix="+">0</span>
+          <span class="stat__label" data-es="Lugares sagrados" data-en="Sacred sites">Lugares sagrados</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -290,182 +341,182 @@
       <div class="galeria__grid">
 
         <div class="galeria__item reveal-item" data-index="0">
-          <img src="images/gallery/ausangate.jpg" alt="Nevado Ausangate" loading="lazy" />
+          <img src="images/gallery/ausangate.webp" alt="Nevado Ausangate" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Nevado Ausangate · Apu Mayor" data-en="Ausangate Mountain · Great Apu">Nevado Ausangate · Apu Mayor</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="1">
-          <img src="images/gallery/ceremonia-ayahuasca.jpg" alt="Ceremonia de Ayahuasca" loading="lazy" />
+          <img src="images/gallery/ceremonia-ayahuasca.webp" alt="Ceremonia de Ayahuasca" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Ceremonia de Ayahuasca" data-en="Ayahuasca Ceremony">Ceremonia de Ayahuasca</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="2">
-          <img src="images/gallery/retiro-01.jpg" alt="Retiro" loading="lazy" />
+          <img src="images/gallery/retiro-01.webp" alt="Retiro" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Capac Inti Raymi · Valle Sagrado" data-en="Capac Inti Raymi · Sacred Valley">Capac Inti Raymi · Valle Sagrado</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="3">
-          <img src="images/gallery/retiro-02.jpg" alt="Retiro" loading="lazy" />
+          <img src="images/gallery/retiro-02.webp" alt="Retiro" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Ritual Andino" data-en="Andean Ritual">Ritual Andino</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="4">
-          <img src="images/gallery/retiro-03.jpg" alt="Retiro" loading="lazy" />
+          <img src="images/gallery/retiro-03.webp" alt="Retiro" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Medicina Ancestral" data-en="Ancestral Medicine">Medicina Ancestral</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="5">
-          <img src="images/gallery/retiro-04.jpg" alt="Retiro" loading="lazy" />
+          <img src="images/gallery/retiro-04.webp" alt="Retiro" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Fuego Sagrado" data-en="Sacred Fire">Fuego Sagrado</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="6">
-          <img src="images/gallery/retiro-05.jpg" alt="Retiro" loading="lazy" />
+          <img src="images/gallery/retiro-05.webp" alt="Retiro" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Comunidad y Sanación" data-en="Community & Healing">Comunidad y Sanación</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="7">
-          <img src="images/gallery/retiro-07.jpg" alt="Retiro" loading="lazy" />
+          <img src="images/gallery/retiro-07.webp" alt="Retiro" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Pisaq · Intihuatana" data-en="Pisaq · Intihuatana">Pisaq · Intihuatana</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="8">
-          <img src="images/gallery/retiro-10.jpg" alt="Retiro" loading="lazy" />
+          <img src="images/gallery/retiro-10.webp" alt="Retiro" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Ceremonia de Ofrenda" data-en="Offering Ceremony">Ceremonia de Ofrenda</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="9">
-          <img src="images/gallery/retiro-11.jpg" alt="Retiro" loading="lazy" />
+          <img src="images/gallery/retiro-11.webp" alt="Retiro" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Baño Floral Tradicional" data-en="Traditional Flower Bath">Baño Floral Tradicional</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="10">
-          <img src="images/gallery/heic-01.jpg" alt="Retiro" loading="lazy" />
+          <img src="images/gallery/heic-01.webp" alt="Retiro" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Koricancha · Templo del Sol" data-en="Koricancha · Temple of the Sun">Koricancha · Templo del Sol</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="11">
-          <img src="images/gallery/heic-05.jpg" alt="Retiro" loading="lazy" />
+          <img src="images/gallery/heic-05.webp" alt="Retiro" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Baños Termales · Ausangate" data-en="Thermal Baths · Ausangate">Baños Termales · Ausangate</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="12">
-          <img src="images/gallery/ayni-05.png" alt="AYNI" loading="lazy" />
+          <img src="images/gallery/ayni-05.webp" alt="AYNI" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="AYNI · Reciprocidad Andina" data-en="AYNI · Andean Reciprocity">AYNI · Reciprocidad Andina</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="13">
-          <img src="images/gallery/foto_02_cine_4k_profesional.jpg" alt="Cine 4K" loading="lazy" />
+          <img src="images/gallery/foto_02_cine_4k_profesional.webp" alt="Cine 4K" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Visión Cinematográfica · Valle Sagrado" data-en="Cinematic Vision · Sacred Valley">Visión Cinematográfica · Valle Sagrado</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="14">
-          <img src="images/gallery/nuevo-02.jpg" alt="Paisaje Andino" loading="lazy" />
+          <img src="images/gallery/nuevo-02.webp" alt="Paisaje Andino" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Paisaje Andino · Tawantinsuyo" data-en="Andean Landscape · Tawantinsuyo">Paisaje Andino · Tawantinsuyo</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="15">
-          <img src="images/gallery/nuevo-03.jpg" alt="Montañas Sagradas" loading="lazy" />
+          <img src="images/gallery/nuevo-03.webp" alt="Montañas Sagradas" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Montañas Sagradas · Cusco" data-en="Sacred Mountains · Cusco">Montañas Sagradas · Cusco</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="16">
-          <img src="images/gallery/nuevo-04.jpg" alt="Andes" loading="lazy" />
+          <img src="images/gallery/nuevo-04.webp" alt="Andes" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Los Andes · Tierra Sagrada" data-en="The Andes · Sacred Land">Los Andes · Tierra Sagrada</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="17">
-          <img src="images/gallery/nuevo-05.jpg" alt="Wiracocha" loading="lazy" />
+          <img src="images/gallery/nuevo-05.webp" alt="Wiracocha" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Wiracocha · Dios Creador" data-en="Wiracocha · Creator God">Wiracocha · Dios Creador</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="18">
-          <img src="images/gallery/nuevo-06.jpg" alt="Llama andina" loading="lazy" />
+          <img src="images/gallery/nuevo-06.webp" alt="Llama andina" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Llama · Compañera del Ande" data-en="Llama · Andean Companion">Llama · Compañera del Ande</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="19">
-          <img src="images/gallery/nuevo-07.jpg" alt="Ceremonia" loading="lazy" />
+          <img src="images/gallery/nuevo-07.webp" alt="Ceremonia" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Ceremonia · Fuego Sagrado" data-en="Ceremony · Sacred Fire">Ceremonia · Fuego Sagrado</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="20">
-          <img src="images/gallery/galeria-01.png" alt="Cultura Andina" loading="lazy" />
+          <img src="images/gallery/galeria-01.webp" alt="Cultura Andina" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Cultura Andina · Tawantinsuyo" data-en="Andean Culture · Tawantinsuyo">Cultura Andina · Tawantinsuyo</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="21">
-          <img src="images/gallery/galeria-02.png" alt="Valle Sagrado" loading="lazy" />
+          <img src="images/gallery/galeria-02.webp" alt="Valle Sagrado" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Valle Sagrado · Cusco" data-en="Sacred Valley · Cusco">Valle Sagrado · Cusco</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="22">
-          <img src="images/gallery/galeria-04.png" alt="Tradición Andina" loading="lazy" />
+          <img src="images/gallery/galeria-04.webp" alt="Tradición Andina" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Tradición Andina · Capac Raymi" data-en="Andean Tradition · Capac Raymi">Tradición Andina · Capac Raymi</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="23">
-          <img src="images/gallery/galeria-05.png" alt="Sagrado" loading="lazy" />
+          <img src="images/gallery/galeria-05.webp" alt="Sagrado" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Camino Sagrado · Inca" data-en="Sacred Path · Inca">Camino Sagrado · Inca</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="24">
-          <img src="images/gallery/galeria-06.png" alt="Visión Andina" loading="lazy" />
+          <img src="images/gallery/galeria-06.webp" alt="Visión Andina" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Visión Andina · Pachamama" data-en="Andean Vision · Pachamama">Visión Andina · Pachamama</span>
           </div>
         </div>
 
         <div class="galeria__item reveal-item" data-index="25">
-          <img src="images/gallery/galeria-07.png" alt="Sagrado Andino" loading="lazy" />
+          <img src="images/gallery/galeria-07.webp" alt="Sagrado Andino" loading="lazy" />
           <div class="galeria__overlay">
             <span class="galeria__caption" data-es="Tierra Sagrada · Andes" data-en="Sacred Land · Andes">Tierra Sagrada · Andes</span>
           </div>
@@ -635,6 +686,18 @@
       <p class="footer__copy">© 2026 Chakana One Travel · Valle Sagrado, Cusco, Perú</p>
     </div>
   </footer>
+
+  <!-- ═══════════════════ ACCIONES FLOTANTES ══ -->
+  <a href="https://wa.me/51949745661?text=Hola%20Kurmi%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Capac%20Inti%20Raymi%20%E2%80%94%20Diciembre%202026."
+     class="fab fab--wa" id="fabWa" target="_blank" rel="noopener"
+     aria-label="Escribir por WhatsApp"
+     data-tip-es="Escríbenos" data-tip-en="Message us">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.532 5.858L.057 23.486a.5.5 0 00.612.612l5.628-1.475A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.953 9.953 0 01-5.119-1.417l-.367-.218-3.797.995.994-3.797-.219-.367A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+  </a>
+  <button class="fab fab--top" id="fabTop" aria-label="Volver arriba">↑</button>
 
   <script src="js/main.js"></script>
 </body>
