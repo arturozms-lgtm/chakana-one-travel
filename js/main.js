@@ -8,6 +8,30 @@
 
   let lang = 'es';
 
+  /* ── Intro splash: Cruz del Sur → Chakana ─────────── */
+  const splash = document.getElementById('introSplash');
+  if (splash && !splash.classList.contains('intro-splash--off')) {
+    const INTRO_TOTAL = 10400; // fin de la secuencia completa
+
+    const endIntro = () => {
+      if (splash.classList.contains('intro-splash--exit')) return;
+      clearTimeout(autoEnd);
+      splash.classList.add('intro-splash--exit');
+      try { sessionStorage.setItem('chakanaIntroSeen', '1'); } catch (e) {}
+      document.documentElement.classList.remove('intro-lock');
+      setTimeout(() => splash.remove(), 1000);
+    };
+
+    const autoEnd = setTimeout(endIntro, INTRO_TOTAL);
+    document.getElementById('introSkip')?.addEventListener('click', endIntro);
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') endIntro();
+    });
+  } else if (splash) {
+    splash.remove();
+    document.documentElement.classList.remove('intro-lock');
+  }
+
   /* ── NAV scroll ───────────────────────────────────── */
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
@@ -413,6 +437,19 @@
       });
     }, { threshold: 0.5 });
     nums.forEach(n => io.observe(n));
+  })();
+
+  /* ── Acordeones: programa (días) + FAQ ────────────── */
+  (function () {
+    const toggles = document.querySelectorAll('.timeline__toggle, .faq__toggle');
+    toggles.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const panel = document.getElementById(btn.getAttribute('aria-controls'));
+        if (!panel) return;
+        const isOpen = panel.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    });
   })();
 
   /* ── Init ─────────────────────────────────────────── */

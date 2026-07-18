@@ -5,12 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chakana One Travel — Capac Inti Raymi 2026</title>
   <meta name="description" content="Retiro espiritual andino-amazónico en el Valle Sagrado del Cusco. 7 días de transformación, ceremonias y sabiduría ancestral. Diciembre 2026." />
+
+  <!-- Open Graph (preview al compartir por WhatsApp / redes) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Chakana One Travel" />
+  <meta property="og:title" content="Capac Inti Raymi 2026 — Retiro en el Valle Sagrado, Cusco" />
+  <meta property="og:description" content="7 días de transformación: ceremonias, plantas maestras y templos sagrados del Tawantinsuyo. 22–28 de diciembre 2026." />
+  <meta property="og:url" content="https://arturozms-lgtm.github.io/chakana-one-travel/" />
+  <meta property="og:image" content="https://arturozms-lgtm.github.io/chakana-one-travel/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="684" />
+  <meta property="og:locale" content="es_PE" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Capac Inti Raymi 2026 — Retiro en el Valle Sagrado, Cusco" />
+  <meta name="twitter:description" content="7 días de transformación: ceremonias, plantas maestras y templos sagrados del Tawantinsuyo. 22–28 de diciembre 2026." />
+  <meta name="twitter:image" content="https://arturozms-lgtm.github.io/chakana-one-travel/images/og-image.jpg" />
+
+  <link rel="icon" type="image/png" href="images/chakana.png" />
+  <meta name="theme-color" content="#0E0C07" />
+
+  <!-- Datos estructurados: evento para Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Capac Inti Raymi 2026 — Retiro Espiritual Andino-Amazónico",
+    "description": "Retiro de 7 días en el Valle Sagrado del Cusco: ceremonias, plantas maestras y templos sagrados del Tawantinsuyo.",
+    "startDate": "2026-12-22",
+    "endDate": "2026-12-28",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "image": "https://arturozms-lgtm.github.io/chakana-one-travel/images/og-image.jpg",
+    "location": {
+      "@type": "Place",
+      "name": "Lovely Heart Retreat Center",
+      "address": { "@type": "PostalAddress", "addressLocality": "Calca", "addressRegion": "Cusco", "addressCountry": "PE" }
+    },
+    "organizer": { "@type": "Organization", "name": "Chakana One Travel", "url": "https://arturozms-lgtm.github.io/chakana-one-travel/" },
+    "offers": {
+      "@type": "Offer",
+      "price": "2500",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/LimitedAvailability",
+      "url": "https://arturozms-lgtm.github.io/chakana-one-travel/#precio"
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+
+  <!-- ═══════════════════ INTRO SPLASH: DE LA CRUZ DEL SUR NACE LA CHAKANA ══ -->
+  <div class="intro-splash" id="introSplash" aria-label="Introducción: de la Cruz del Sur nace la Chakana">
+    <div class="intro-splash__stars" aria-hidden="true"></div>
+    <div class="intro-splash__via" aria-hidden="true"></div>
+
+    <div class="intro-splash__stage">
+      <svg class="intro-splash__svg" viewBox="0 0 400 400" aria-hidden="true">
+        <defs>
+          <filter id="introChakGlow" x="-40%" y="-40%" width="180%" height="180%">
+            <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#C8922A" flood-opacity="0.8"/>
+          </filter>
+          <filter id="introStarGlow" x="-300%" y="-300%" width="700%" height="700%">
+            <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#BFD8FF" flood-opacity="0.9"/>
+          </filter>
+        </defs>
+
+        <!-- Geometría de proporción andina: cuadrado → círculo → √2 -->
+        <g class="isplash-geo">
+          <rect class="geo geo--sq"   x="80" y="80" width="240" height="240"/>
+          <circle class="geo geo--c1" cx="200" cy="200" r="169.7"/>
+          <rect class="geo geo--sq45" x="80" y="80" width="240" height="240"
+                transform="rotate(45 200 200)"/>
+          <circle class="geo geo--c2" cx="200" cy="200" r="120"/>
+          <rect class="geo geo--sq2"  x="115.15" y="115.15" width="169.7" height="169.7"/>
+        </g>
+
+        <!-- Cruz del Sur -->
+        <g class="isplash-crux">
+          <line class="crux-line crux-line--v" x1="200" y1="80"  x2="200" y2="320"/>
+          <line class="crux-line crux-line--h" x1="80"  y1="200" x2="320" y2="200"/>
+          <circle class="crux-star crux-star--n" cx="200" cy="80"  r="4.5" filter="url(#introStarGlow)"/>
+          <circle class="crux-star crux-star--s" cx="200" cy="320" r="6"   filter="url(#introStarGlow)"/>
+          <circle class="crux-star crux-star--w" cx="80"  cy="200" r="4"   filter="url(#introStarGlow)"/>
+          <circle class="crux-star crux-star--e" cx="320" cy="200" r="5"   filter="url(#introStarGlow)"/>
+        </g>
+
+        <!-- Chakana escalonada -->
+        <g class="isplash-chakana" filter="url(#introChakGlow)">
+          <path class="chakana-draw"
+                d="M164,92 H236 V128 H272 V164 H308 V236 H272 V272 H236 V308 H164 V272 H128 V236 H92 V164 H128 V128 H164 Z"/>
+          <circle class="chakana-eye" cx="200" cy="200" r="20"/>
+        </g>
+      </svg>
+
+      <div class="intro-splash__text">
+        <p class="intro-caption intro-caption--1"
+           data-es="La Cruz del Sur" data-en="The Southern Cross">La Cruz del Sur</p>
+        <p class="intro-caption intro-caption--2"
+           data-es="El cuadrado que ordena el cielo"
+           data-en="The square that orders the sky">El cuadrado que ordena el cielo</p>
+        <p class="intro-caption intro-caption--3"
+           data-es="La proporción sagrada · 1 : √2"
+           data-en="The sacred proportion · 1 : √2">La proporción sagrada · 1 : √2</p>
+        <div class="intro-brand">
+          <p class="intro-brand__name">Chakana One Travel</p>
+          <p class="intro-brand__sub"
+             data-es="Capac Inti Raymi · Valle Sagrado · 2026"
+             data-en="Capac Inti Raymi · Sacred Valley · 2026">Capac Inti Raymi · Valle Sagrado · 2026</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="intro-splash__skip" id="introSkip" type="button"
+            data-es="Saltar intro →" data-en="Skip intro →">Saltar intro →</button>
+  </div>
+  <script>
+    (function () {
+      try {
+        if (sessionStorage.getItem('chakanaIntroSeen') === '1' ||
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          document.getElementById('introSplash').classList.add('intro-splash--off');
+        } else {
+          document.documentElement.classList.add('intro-lock');
+        }
+      } catch (e) {}
+    })();
+  </script>
 
   <!-- ═══════════════════ BARRA DE PROGRESO DE SCROLL ══ -->
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
@@ -28,6 +153,7 @@
         <a href="#lugar" class="nav__link" data-es="Lugar" data-en="Venue">Lugar</a>
         <a href="#galeria" class="nav__link" data-es="Galería" data-en="Gallery">Galería</a>
         <a href="#precio" class="nav__link" data-es="Inscripción" data-en="Enroll">Inscripción</a>
+        <a href="#faq" class="nav__link">FAQ</a>
         <button class="lang-toggle" id="langToggle">EN</button>
       </div>
       <button class="nav__burger" id="burger" aria-label="Menú">
@@ -126,6 +252,12 @@
         </div>
       </div>
 
+      <p class="hero__cupos">
+        <span class="hero__cupos-dot" aria-hidden="true"></span>
+        <span data-es="Grupo reducido · Cupos limitados"
+              data-en="Small group · Limited spots">Grupo reducido · Cupos limitados</span>
+      </p>
+
       <p class="hero__quote"
          data-es="Aquí los Apus guardan el cielo y tus orígenes."
          data-en="Here the Apus guard the sky and your origins.">
@@ -191,81 +323,152 @@
     <div class="container">
       <p class="section-eyebrow" data-es="7 días · 6 noches" data-en="7 days · 6 nights">7 días · 6 noches</p>
       <h2 class="section-title" data-es="El Programa" data-en="The Program">El Programa</h2>
+      <p class="timeline__hint" data-es="Toca cada día para ver su detalle" data-en="Tap each day to see its details">Toca cada día para ver su detalle</p>
       <div class="timeline">
         <div class="timeline__item reveal-item">
           <div class="timeline__marker"><span class="timeline__day" data-es="Día" data-en="Day">Día</span><span class="timeline__num">1</span></div>
           <div class="timeline__content">
-            <h3 data-es="Llegada y Bienvenida" data-en="Arrival & Welcome">Llegada y Bienvenida</h3>
-            <ul>
-              <li data-es="Recepción en Aeropuerto del Cusco" data-en="Reception at Cusco Airport">Recepción en Aeropuerto del Cusco</li>
-              <li data-es="Traslado al Valle Sagrado" data-en="Transfer to the Sacred Valley">Traslado al Valle Sagrado</li>
-              <li data-es="Orientación y adaptación a la altitud" data-en="Orientation and altitude adaptation">Orientación y adaptación a la altitud</li>
-              <li data-es="Ceremonia de bienvenida con fogata y música" data-en="Welcome ceremony with bonfire and music">Ceremonia de bienvenida con fogata y música</li>
-            </ul>
+            <h3 class="timeline__heading">
+              <button class="timeline__toggle" aria-expanded="true" aria-controls="dia-1">
+                <span data-es="Llegada y Bienvenida" data-en="Arrival & Welcome">Llegada y Bienvenida</span>
+                <svg class="timeline__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div class="timeline__panel open" id="dia-1">
+              <div class="timeline__panel-inner">
+                <img class="timeline__photo" src="images/gallery/retiro-01.webp" alt="Valle Sagrado del Cusco" loading="lazy" />
+                <ul>
+                  <li data-es="Recepción en Aeropuerto del Cusco" data-en="Reception at Cusco Airport">Recepción en Aeropuerto del Cusco</li>
+                  <li data-es="Traslado al Valle Sagrado" data-en="Transfer to the Sacred Valley">Traslado al Valle Sagrado</li>
+                  <li data-es="Orientación y adaptación a la altitud" data-en="Orientation and altitude adaptation">Orientación y adaptación a la altitud</li>
+                  <li data-es="Ceremonia de bienvenida con fogata y música" data-en="Welcome ceremony with bonfire and music">Ceremonia de bienvenida con fogata y música</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class="timeline__item reveal-item">
           <div class="timeline__marker"><span class="timeline__day" data-es="Día" data-en="Day">Día</span><span class="timeline__num">2</span></div>
           <div class="timeline__content">
-            <h3 data-es="Baño Floral y Ayahuasca" data-en="Flower Bath & Ayahuasca">Baño Floral y Ayahuasca</h3>
-            <ul>
-              <li data-es="Baño floral tradicional con madres locales" data-en="Traditional flower bath with local mothers">Baño floral tradicional con madres locales</li>
-              <li data-es="Ceremonia de Ayahuasca" data-en="Ayahuasca Ceremony">Ceremonia de Ayahuasca</li>
-            </ul>
+            <h3 class="timeline__heading">
+              <button class="timeline__toggle" aria-expanded="false" aria-controls="dia-2">
+                <span data-es="Baño Floral y Ayahuasca" data-en="Flower Bath & Ayahuasca">Baño Floral y Ayahuasca</span>
+                <svg class="timeline__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div class="timeline__panel" id="dia-2">
+              <div class="timeline__panel-inner">
+                <img class="timeline__photo" src="images/gallery/ceremonia-ayahuasca.webp" alt="Ceremonia de Ayahuasca" loading="lazy" />
+                <ul>
+                  <li data-es="Baño floral tradicional con madres locales" data-en="Traditional flower bath with local mothers">Baño floral tradicional con madres locales</li>
+                  <li data-es="Ceremonia de Ayahuasca" data-en="Ayahuasca Ceremony">Ceremonia de Ayahuasca</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class="timeline__item reveal-item">
           <div class="timeline__marker"><span class="timeline__day" data-es="Día" data-en="Day">Día</span><span class="timeline__num">3</span></div>
           <div class="timeline__content">
-            <h3 data-es="Templos y Observatorio" data-en="Temples & Observatory">Templos y Observatorio</h3>
-            <ul>
-              <li data-es="Caminata a Huchuycosco" data-en="Walk to Huchuycosco">Caminata a Huchuycosco</li>
-              <li data-es="Museo Encarnado" data-en="Incarnate Museum">Museo Encarnado</li>
-              <li data-es="Observatorio Astronómico — Calca" data-en="Astronomical Observatory — Calca">Observatorio Astronómico — Calca</li>
-            </ul>
+            <h3 class="timeline__heading">
+              <button class="timeline__toggle" aria-expanded="false" aria-controls="dia-3">
+                <span data-es="Templos y Observatorio" data-en="Temples & Observatory">Templos y Observatorio</span>
+                <svg class="timeline__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div class="timeline__panel" id="dia-3">
+              <div class="timeline__panel-inner">
+                <img class="timeline__photo" src="images/gallery/southernCross_beletsky.webp" alt="Cielo nocturno · Cruz del Sur" loading="lazy" />
+                <ul>
+                  <li data-es="Caminata a Huchuycosco" data-en="Walk to Huchuycosco">Caminata a Huchuycosco</li>
+                  <li data-es="Museo Encarnado" data-en="Incarnate Museum">Museo Encarnado</li>
+                  <li data-es="Observatorio Astronómico — Calca" data-en="Astronomical Observatory — Calca">Observatorio Astronómico — Calca</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class="timeline__item reveal-item">
           <div class="timeline__marker"><span class="timeline__day" data-es="Día" data-en="Day">Día</span><span class="timeline__num">4</span></div>
           <div class="timeline__content">
-            <h3 data-es="Pisaq e Intihuatana" data-en="Pisaq & Intihuatana">Pisaq e Intihuatana</h3>
-            <ul>
-              <li data-es="Pisaq — Intihuatana" data-en="Pisaq — Intihuatana">Pisaq — Intihuatana</li>
-              <li data-es="Wachuma — Fuego Sagrado" data-en="Wachuma — Sacred Fire">Wachuma — Fuego Sagrado</li>
-              <li data-es="Alimentación vegetariana" data-en="Vegetarian meals">Alimentación vegetariana</li>
-            </ul>
+            <h3 class="timeline__heading">
+              <button class="timeline__toggle" aria-expanded="false" aria-controls="dia-4">
+                <span data-es="Pisaq e Intihuatana" data-en="Pisaq & Intihuatana">Pisaq e Intihuatana</span>
+                <svg class="timeline__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div class="timeline__panel" id="dia-4">
+              <div class="timeline__panel-inner">
+                <img class="timeline__photo" src="images/gallery/retiro-07.webp" alt="Pisaq · Intihuatana" loading="lazy" />
+                <ul>
+                  <li data-es="Pisaq — Intihuatana" data-en="Pisaq — Intihuatana">Pisaq — Intihuatana</li>
+                  <li data-es="Wachuma — Fuego Sagrado" data-en="Wachuma — Sacred Fire">Wachuma — Fuego Sagrado</li>
+                  <li data-es="Alimentación vegetariana" data-en="Vegetarian meals">Alimentación vegetariana</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class="timeline__item reveal-item">
           <div class="timeline__marker"><span class="timeline__day" data-es="Día" data-en="Day">Día</span><span class="timeline__num">5</span></div>
           <div class="timeline__content">
-            <h3 data-es="Ausangate" data-en="Ausangate">Ausangate</h3>
-            <ul>
-              <li data-es="Montaña Ausangate" data-en="Ausangate Mountain">Montaña Ausangate</li>
-              <li data-es="Baños termales" data-en="Thermal baths">Baños termales</li>
-              <li data-es="Noche en Ausangate" data-en="Night at Ausangate">Noche en Ausangate</li>
-            </ul>
+            <h3 class="timeline__heading">
+              <button class="timeline__toggle" aria-expanded="false" aria-controls="dia-5">
+                <span data-es="Ausangate" data-en="Ausangate">Ausangate</span>
+                <svg class="timeline__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div class="timeline__panel" id="dia-5">
+              <div class="timeline__panel-inner">
+                <img class="timeline__photo" src="images/gallery/ausangate.webp" alt="Nevado Ausangate" loading="lazy" />
+                <ul>
+                  <li data-es="Montaña Ausangate" data-en="Ausangate Mountain">Montaña Ausangate</li>
+                  <li data-es="Baños termales" data-en="Thermal baths">Baños termales</li>
+                  <li data-es="Noche en Ausangate" data-en="Night at Ausangate">Noche en Ausangate</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class="timeline__item reveal-item">
           <div class="timeline__marker"><span class="timeline__day" data-es="Día" data-en="Day">Día</span><span class="timeline__num">6</span></div>
           <div class="timeline__content">
-            <h3 data-es="Lo Sagrado a lo Sagrado" data-en="Sacred to Sacred">Lo Sagrado a lo Sagrado</h3>
-            <ul>
-              <li data-es="Qispiwara" data-en="Qispiwara">Qispiwara</li>
-              <li data-es="Ceremonia de Ofrenda" data-en="Offering Ceremony">Ceremonia de Ofrenda</li>
-            </ul>
+            <h3 class="timeline__heading">
+              <button class="timeline__toggle" aria-expanded="false" aria-controls="dia-6">
+                <span data-es="Lo Sagrado a lo Sagrado" data-en="Sacred to Sacred">Lo Sagrado a lo Sagrado</span>
+                <svg class="timeline__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div class="timeline__panel" id="dia-6">
+              <div class="timeline__panel-inner">
+                <img class="timeline__photo" src="images/gallery/retiro-10.webp" alt="Ceremonia de Ofrenda" loading="lazy" />
+                <ul>
+                  <li data-es="Qispiwara" data-en="Qispiwara">Qispiwara</li>
+                  <li data-es="Ceremonia de Ofrenda" data-en="Offering Ceremony">Ceremonia de Ofrenda</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class="timeline__item reveal-item">
           <div class="timeline__marker"><span class="timeline__day" data-es="Día" data-en="Day">Día</span><span class="timeline__num">7</span></div>
           <div class="timeline__content">
-            <h3 data-es="Koricancha y Regreso" data-en="Koricancha & Departure">Koricancha y Regreso</h3>
-            <ul>
-              <li data-es="Visita al Koricancha" data-en="Visit to the Koricancha">Visita al Koricancha</li>
-              <li data-es="Desayuno en el Cusco" data-en="Breakfast in Cusco">Desayuno en el Cusco</li>
-              <li data-es="Salida a Lima" data-en="Departure to Lima">Salida a Lima</li>
-            </ul>
+            <h3 class="timeline__heading">
+              <button class="timeline__toggle" aria-expanded="false" aria-controls="dia-7">
+                <span data-es="Koricancha y Regreso" data-en="Koricancha & Departure">Koricancha y Regreso</span>
+                <svg class="timeline__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div class="timeline__panel" id="dia-7">
+              <div class="timeline__panel-inner">
+                <img class="timeline__photo" src="images/gallery/heic-01.webp" alt="Koricancha · Templo del Sol" loading="lazy" />
+                <ul>
+                  <li data-es="Visita al Koricancha" data-en="Visit to the Koricancha">Visita al Koricancha</li>
+                  <li data-es="Desayuno en el Cusco" data-en="Breakfast in Cusco">Desayuno en el Cusco</li>
+                  <li data-es="Salida a Lima" data-en="Departure to Lima">Salida a Lima</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -539,6 +742,58 @@
     </div>
   </div>
 
+  <!-- ═══════════════════ TESTIMONIOS ══
+       ⚠️ IMPORTANTE: los tres testimonios de abajo son PLANTILLAS.
+       Reemplázalos con palabras reales de tus participantes
+       (nombre, país y cita textual) antes de publicar. -->
+  <section class="testimonios reveal" id="testimonios">
+    <div class="container">
+      <p class="section-eyebrow" data-es="Voces del camino" data-en="Voices from the path">Voces del camino</p>
+      <h2 class="section-title" data-es="Quienes ya caminaron con nosotros" data-en="Those who walked with us">Quienes ya caminaron con nosotros</h2>
+      <div class="testimonios__grid">
+        <figure class="testimonio-card reveal-item">
+          <svg class="testimonio-card__icon" viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M33,0 H67 V33 H100 V67 H67 V100 H33 V67 H0 V33 H33 Z" fill="none" stroke="currentColor" stroke-width="4"/>
+          </svg>
+          <blockquote class="testimonio-card__quote">
+            <span data-es="«Escribe aquí el testimonio textual de tu participante: qué sintió, qué se llevó del retiro.»"
+                  data-en="“Write here your participant's own words: what they felt, what they took home from the retreat.”">«Escribe aquí el testimonio textual de tu participante: qué sintió, qué se llevó del retiro.»</span>
+          </blockquote>
+          <figcaption class="testimonio-card__author">
+            <span class="testimonio-card__name">Nombre Apellido</span>
+            <span class="testimonio-card__origin" data-es="País · Retiro 2025" data-en="Country · 2025 Retreat">País · Retiro 2025</span>
+          </figcaption>
+        </figure>
+        <figure class="testimonio-card reveal-item">
+          <svg class="testimonio-card__icon" viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M33,0 H67 V33 H100 V67 H67 V100 H33 V67 H0 V33 H33 Z" fill="none" stroke="currentColor" stroke-width="4"/>
+          </svg>
+          <blockquote class="testimonio-card__quote">
+            <span data-es="«Segundo testimonio: idealmente menciona un momento concreto — la ceremonia, el Ausangate, la comunidad.»"
+                  data-en="“Second testimonial: ideally mention a concrete moment — the ceremony, Ausangate, the community.”">«Segundo testimonio: idealmente menciona un momento concreto — la ceremonia, el Ausangate, la comunidad.»</span>
+          </blockquote>
+          <figcaption class="testimonio-card__author">
+            <span class="testimonio-card__name">Nombre Apellido</span>
+            <span class="testimonio-card__origin" data-es="País · Retiro 2025" data-en="Country · 2025 Retreat">País · Retiro 2025</span>
+          </figcaption>
+        </figure>
+        <figure class="testimonio-card reveal-item">
+          <svg class="testimonio-card__icon" viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M33,0 H67 V33 H100 V67 H67 V100 H33 V67 H0 V33 H33 Z" fill="none" stroke="currentColor" stroke-width="4"/>
+          </svg>
+          <blockquote class="testimonio-card__quote">
+            <span data-es="«Tercer testimonio: una frase corta y potente funciona mejor que un párrafo largo.»"
+                  data-en="“Third testimonial: a short, powerful sentence works better than a long paragraph.”">«Tercer testimonio: una frase corta y potente funciona mejor que un párrafo largo.»</span>
+          </blockquote>
+          <figcaption class="testimonio-card__author">
+            <span class="testimonio-card__name">Nombre Apellido</span>
+            <span class="testimonio-card__origin" data-es="País · Retiro 2025" data-en="Country · 2025 Retreat">País · Retiro 2025</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════════════ DIVISOR ══ -->
   <div class="divider" aria-hidden="true">
     <svg viewBox="0 0 400 40" xmlns="http://www.w3.org/2000/svg">
@@ -667,6 +922,109 @@
         <div class="copy-toast" id="copyToast" data-es="¡Copiado!" data-en="Copied!">¡Copiado!</div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FAQ ══ -->
+  <section class="faq reveal" id="faq">
+    <div class="container">
+      <p class="section-eyebrow" data-es="Antes de reservar" data-en="Before you book">Antes de reservar</p>
+      <h2 class="section-title" data-es="Preguntas Frecuentes" data-en="Frequently Asked Questions">Preguntas Frecuentes</h2>
+
+      <div class="faq__list">
+
+        <div class="faq__item reveal-item">
+          <h3 class="faq__heading">
+            <button class="faq__toggle" aria-expanded="false" aria-controls="faq-1">
+              <span data-es="¿Necesito experiencia previa con plantas maestras?"
+                    data-en="Do I need previous experience with master plants?">¿Necesito experiencia previa con plantas maestras?</span>
+              <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="faq__panel" id="faq-1">
+            <p data-es="No. El retiro está diseñado tanto para quienes se acercan por primera vez como para quienes ya conocen el camino. Cada ceremonia es guiada por maestros con años de experiencia y se acompaña a cada participante de forma personal."
+               data-en="No. The retreat is designed both for first-timers and for those who already know this path. Every ceremony is guided by masters with years of experience, and each participant receives personal accompaniment.">No. El retiro está diseñado tanto para quienes se acercan por primera vez como para quienes ya conocen el camino. Cada ceremonia es guiada por maestros con años de experiencia y se acompaña a cada participante de forma personal.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal-item">
+          <h3 class="faq__heading">
+            <button class="faq__toggle" aria-expanded="false" aria-controls="faq-2">
+              <span data-es="¿Cómo me adapto a la altura del Cusco?"
+                    data-en="How do I adapt to Cusco's altitude?">¿Cómo me adapto a la altura del Cusco?</span>
+              <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="faq__panel" id="faq-2">
+            <p data-es="El primer día está dedicado a la orientación y adaptación a la altitud en el Valle Sagrado (más bajo que la ciudad del Cusco). Recomendamos llegar descansado, hidratarse bien y tomarlo con calma las primeras 24 horas. Te enviaremos una guía de preparación al reservar."
+               data-en="The first day is dedicated to orientation and altitude adaptation in the Sacred Valley (lower than Cusco city). We recommend arriving rested, staying well hydrated, and taking it easy for the first 24 hours. We'll send you a preparation guide when you book.">El primer día está dedicado a la orientación y adaptación a la altitud en el Valle Sagrado (más bajo que la ciudad del Cusco). Recomendamos llegar descansado, hidratarse bien y tomarlo con calma las primeras 24 horas. Te enviaremos una guía de preparación al reservar.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal-item">
+          <h3 class="faq__heading">
+            <button class="faq__toggle" aria-expanded="false" aria-controls="faq-3">
+              <span data-es="¿Hay una dieta o preparación previa?"
+                    data-en="Is there a diet or preparation beforehand?">¿Hay una dieta o preparación previa?</span>
+              <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="faq__panel" id="faq-3">
+            <p data-es="Sí. Antes de las ceremonias se recomienda una dieta ligera: evitar alcohol, carnes rojas y alimentos muy condimentados los días previos. Durante el retiro la alimentación es vegetariana y está incluida. Al reservar te guiamos paso a paso por WhatsApp."
+               data-en="Yes. Before the ceremonies a light diet is recommended: avoid alcohol, red meat, and heavily seasoned food in the preceding days. During the retreat all meals are vegetarian and included. When you book, we guide you step by step via WhatsApp.">Sí. Antes de las ceremonias se recomienda una dieta ligera: evitar alcohol, carnes rojas y alimentos muy condimentados los días previos. Durante el retiro la alimentación es vegetariana y está incluida. Al reservar te guiamos paso a paso por WhatsApp.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal-item">
+          <h3 class="faq__heading">
+            <button class="faq__toggle" aria-expanded="false" aria-controls="faq-4">
+              <span data-es="¿Existen contraindicaciones médicas?"
+                    data-en="Are there medical contraindications?">¿Existen contraindicaciones médicas?</span>
+              <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="faq__panel" id="faq-4">
+            <p data-es="Sí. Algunas condiciones de salud y medicamentos (por ejemplo antidepresivos o afecciones cardíacas) no son compatibles con las plantas maestras. Antes de confirmar tu reserva conversamos contigo sobre tu salud de forma confidencial, para cuidarte y decidir juntos si el retiro es adecuado para ti."
+               data-en="Yes. Some health conditions and medications (for example antidepressants or heart conditions) are not compatible with master plants. Before confirming your booking we talk with you confidentially about your health, to take care of you and decide together whether the retreat is right for you.">Sí. Algunas condiciones de salud y medicamentos (por ejemplo antidepresivos o afecciones cardíacas) no son compatibles con las plantas maestras. Antes de confirmar tu reserva conversamos contigo sobre tu salud de forma confidencial, para cuidarte y decidir juntos si el retiro es adecuado para ti.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal-item">
+          <h3 class="faq__heading">
+            <button class="faq__toggle" aria-expanded="false" aria-controls="faq-5">
+              <span data-es="¿Qué debo llevar?"
+                    data-en="What should I bring?">¿Qué debo llevar?</span>
+              <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="faq__panel" id="faq-5">
+            <p data-es="Ropa abrigadora en capas (las noches andinas son frías), zapatos de caminata, protector solar, gorro, botella de agua reutilizable, linterna y ropa de baño para los baños termales. Al reservar recibirás la lista completa."
+               data-en="Warm layered clothing (Andean nights are cold), walking shoes, sunscreen, a hat, a reusable water bottle, a flashlight, and swimwear for the thermal baths. You'll receive the full list when you book.">Ropa abrigadora en capas (las noches andinas son frías), zapatos de caminata, protector solar, gorro, botella de agua reutilizable, linterna y ropa de baño para los baños termales. Al reservar recibirás la lista completa.</p>
+          </div>
+        </div>
+
+        <div class="faq__item reveal-item">
+          <h3 class="faq__heading">
+            <button class="faq__toggle" aria-expanded="false" aria-controls="faq-6">
+              <span data-es="¿Cómo funcionan el pago y la cancelación?"
+                    data-en="How do payment and cancellation work?">¿Cómo funcionan el pago y la cancelación?</span>
+              <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </h3>
+          <div class="faq__panel" id="faq-6">
+            <p data-es="Reservas con el 50% (USD 1,250) por transferencia y el 50% restante se paga al llegar al retiro. Para conocer las condiciones de cambio de fecha o cancelación, escríbenos por WhatsApp y te las explicamos antes de que pagues."
+               data-en="You reserve with 50% (USD 1,250) by bank transfer and pay the remaining 50% upon arrival. For date-change or cancellation terms, message us on WhatsApp and we'll explain everything before you pay.">Reservas con el 50% (USD 1,250) por transferencia y el 50% restante se paga al llegar al retiro. Para conocer las condiciones de cambio de fecha o cancelación, escríbenos por WhatsApp y te las explicamos antes de que pagues.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="faq__more">
+        <span data-es="¿Tienes otra pregunta?" data-en="Have another question?">¿Tienes otra pregunta?</span>
+        <a href="https://wa.me/51949745661?text=Hola%20Kurmi%2C%20tengo%20una%20pregunta%20sobre%20el%20Capac%20Inti%20Raymi%202026."
+           target="_blank" rel="noopener" class="faq__more-link"
+           data-es="Escríbenos por WhatsApp →" data-en="Message us on WhatsApp →">Escríbenos por WhatsApp →</a>
+      </p>
     </div>
   </section>
 
