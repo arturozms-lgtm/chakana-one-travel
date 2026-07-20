@@ -32,6 +32,34 @@
     document.documentElement.classList.remove('intro-lock');
   }
 
+  /* ── Modal Ayahuasca ──────────────────────────────── */
+  (function () {
+    const modal = document.getElementById('ayahuascaModal');
+    const openBtn = document.getElementById('ayahuascaOpen');
+    if (!modal || !openBtn) return;
+
+    const closeEls = modal.querySelectorAll('[data-pmodal-close]');
+
+    function openModal() {
+      modal.hidden = false;
+      modal.querySelector('.pmodal__scroll').scrollTop = 0;
+      document.documentElement.classList.add('pmodal-lock');
+      modal.querySelector('.pmodal__close').focus();
+    }
+
+    function closeModal() {
+      modal.hidden = true;
+      document.documentElement.classList.remove('pmodal-lock');
+      openBtn.focus();
+    }
+
+    openBtn.addEventListener('click', openModal);
+    closeEls.forEach(el => el.addEventListener('click', closeModal));
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !modal.hidden) closeModal();
+    });
+  })();
+
   /* ── NAV scroll ───────────────────────────────────── */
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {

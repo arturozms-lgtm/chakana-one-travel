@@ -2719,3 +2719,193 @@ html.intro-lock { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .intro-splash { display: none; }
 }
+
+/* ═══════════════════════════════════════════════════════
+   MODAL AYAHUASCA — ceremonias, dieta y recomendaciones
+═══════════════════════════════════════════════════════ */
+html.pmodal-lock { overflow: hidden; }
+
+.planta-card__cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: transparent;
+  border: 1px solid var(--c-gold-dk);
+  border-radius: 999px;
+  color: var(--c-gold);
+  font-family: var(--f-util);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  min-height: 44px;
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition),
+              background var(--transition), transform var(--transition);
+}
+
+.planta-card__cta:hover,
+.planta-card__cta:focus-visible {
+  color: var(--c-bg);
+  background: var(--c-gold);
+  border-color: var(--c-gold);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.pmodal {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.75rem, 3vw, 3rem);
+}
+
+.pmodal[hidden] { display: none; }
+
+.pmodal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 5, 2, 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: pmodalFade 0.3s ease both;
+}
+
+.pmodal__panel {
+  position: relative;
+  width: min(100%, 760px);
+  max-height: min(92vh, 92dvh);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, var(--c-bg-3) 0%, var(--c-bg-2) 100%);
+  border: 1px solid rgba(200, 146, 42, 0.35);
+  border-radius: 14px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  animation: pmodalUp 0.4s cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+
+@keyframes pmodalFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pmodalUp {
+  from { opacity: 0; transform: translateY(28px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pmodal__backdrop, .pmodal__panel { animation: none; }
+}
+
+.pmodal__close {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: rgba(14, 12, 7, 0.7);
+  border: 1px solid rgba(212, 201, 176, 0.3);
+  border-radius: 50%;
+  color: var(--c-mist);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.pmodal__close:hover,
+.pmodal__close:focus-visible {
+  color: var(--c-white);
+  border-color: var(--c-gold);
+  outline: none;
+}
+
+.pmodal__header {
+  padding: 2rem 2rem 1.25rem;
+  border-bottom: 1px solid rgba(200, 146, 42, 0.2);
+}
+
+.pmodal__header .section-eyebrow { margin-bottom: 0.4rem; }
+
+.pmodal__title {
+  font-family: var(--f-display);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 400;
+  color: var(--c-white);
+  line-height: 1.15;
+}
+
+.pmodal__scroll {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 2rem 2.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-gold-dk) transparent;
+}
+
+.pmodal__section {
+  padding-top: 2rem;
+}
+
+.pmodal__section + .pmodal__section {
+  margin-top: 2.5rem;
+  border-top: 1px solid rgba(107, 92, 71, 0.35);
+}
+
+.pmodal__heading {
+  font-family: var(--f-display);
+  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  font-weight: 600;
+  color: var(--c-gold-lt);
+  margin-bottom: 1.25rem;
+}
+
+.pmodal__img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(200, 146, 42, 0.25);
+  margin-bottom: 1.5rem;
+}
+
+.pmodal__section p {
+  margin-bottom: 1.1rem;
+  max-width: 65ch;
+}
+
+.pmodal__section p:last-child { margin-bottom: 0; }
+
+.pmodal__section strong { color: var(--c-gold-lt); }
+
+.pmodal__list {
+  list-style: none;
+  margin: 0 0 1.1rem;
+  max-width: 65ch;
+}
+
+.pmodal__list li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.9rem;
+}
+
+.pmodal__list li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  color: var(--c-gold);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .pmodal { padding: 0.6rem; }
+  .pmodal__panel { max-height: 96dvh; }
+  .pmodal__header { padding: 1.5rem 1.25rem 1rem; padding-right: 4rem; }
+  .pmodal__scroll { padding: 0.25rem 1.25rem 2rem; }
+}
