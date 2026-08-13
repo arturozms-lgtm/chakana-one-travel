@@ -150,6 +150,7 @@
       <div class="nav__links">
         <a href="#programa" class="nav__link" data-es="Programa" data-en="Program">Programa</a>
         <a href="#plantas" class="nav__link" data-es="Plantas" data-en="Plants">Plantas</a>
+        <a href="#agenda" class="nav__link" data-es="Agenda" data-en="Calendar">Agenda</a>
         <a href="#lugar" class="nav__link" data-es="Lugar" data-en="Venue">Lugar</a>
         <a href="#galeria" class="nav__link" data-es="Galería" data-en="Gallery">Galería</a>
         <a href="#precio" class="nav__link" data-es="Inscripción" data-en="Enroll">Inscripción</a>
@@ -489,34 +490,184 @@
     <div class="container">
       <p class="section-eyebrow" data-es="Medicina ancestral" data-en="Ancestral Medicine">Medicina ancestral</p>
       <h2 class="section-title" data-es="Plantas Sagradas" data-en="Sacred Plants">Plantas Sagradas</h2>
-      <div class="plantas__grid">
-        <div class="planta-card reveal-item">
-          <div class="planta-card__icon">☽</div>
-          <h3 class="planta-card__name">Ayahuasca</h3>
-          <p class="planta-card__subtitle" data-es='"Soga de Muerte"' data-en='"Rope of Death"'>"Soga de Muerte"</p>
-          <p class="planta-card__body" data-es="Planta maestra que nos recuerda la importancia de caminar sin ego. Ayuda a ver el inconsciente, enseñando a observar el mundo interior y reconocerse en el amor." data-en="Master plant that reminds us of the importance of walking without ego. It helps us see our unconscious, teaching people to observe their inner world and recognize themselves in love.">
-            Planta maestra que nos recuerda la importancia de caminar sin ego. Ayuda a ver el inconsciente, enseñando a observar el mundo interior y reconocerse en el amor.
-          </p>
-          <button class="planta-card__cta" id="ayahuascaOpen" type="button"
-                  aria-haspopup="dialog" aria-controls="ayahuascaModal"
-                  data-es="Ceremonias de Ayahuasca →" data-en="Ayahuasca Ceremonies →">Ceremonias de Ayahuasca →</button>
-        </div>
-        <div class="planta-card reveal-item">
-          <div class="planta-card__icon">☀</div>
-          <h3 class="planta-card__name">Wachuma</h3>
-          <p class="planta-card__subtitle" data-es='"Sin Cabeza" en Quechua' data-en='"Headless" in Quechua'>"Sin Cabeza" en Quechua</p>
-          <p class="planta-card__body" data-es="Medicina que nos conecta con los cuatro abuelos: agua, fuego, tierra y aire. A través de ella, uno entra en la Madre Naturaleza y la vibración del Padre Espíritu, dejando de lado la mente para sentir con el corazón." data-en="Medicine that connects us with the four grandparents: water, fire, earth, and air. Through it, one enters into Mother Nature and the vibration of Father Spirit, setting aside the mind to feel with the heart.">
-            Medicina que nos conecta con los cuatro abuelos: agua, fuego, tierra y aire. A través de ella, uno entra en la Madre Naturaleza y la vibración del Padre Espíritu, dejando de lado la mente para sentir con el corazón.
-          </p>
-          <button class="planta-card__cta" id="wachumaOpen" type="button"
-                  aria-haspopup="dialog" aria-controls="wachumaModal"
-                  data-es="Ceremonias de Wachuma →" data-en="Wachuma Ceremonies →">Ceremonias de Wachuma →</button>
-        </div>
+      <p class="plantas__lead"
+         data-es="Dos medicinas, dos tiempos del día. La noche abre hacia adentro; el día devuelve la mirada al mundo. Ambas se toman dentro de la tradición y con acompañamiento."
+         data-en="Two medicines, two times of day. The night opens inward; the day returns your gaze to the world. Both are taken within the tradition, with guidance.">
+        Dos medicinas, dos tiempos del día. La noche abre hacia adentro; el día devuelve la mirada al mundo. Ambas se toman dentro de la tradición y con acompañamiento.
+      </p>
+
+      <div class="medicinas">
+
+        <article class="medicina reveal-item">
+          <div class="medicina__media">
+            <img src="images/gallery/ceremonia-ayahuasca.webp"
+                 alt="Ceremonia de Ayahuasca: la medicina se comparte en el templo"
+                 loading="lazy" width="605" height="465" />
+          </div>
+          <div class="medicina__card">
+            <p class="medicina__eyebrow" data-es="Medicina de la noche" data-en="Medicine of the night">Medicina de la noche</p>
+            <h3 class="medicina__name">Ayahuasca</h3>
+            <p class="medicina__quechua" data-es='"Soga de Muerte"' data-en='"Rope of Death"'>"Soga de Muerte"</p>
+            <div class="medicina__rule" aria-hidden="true"></div>
+            <p data-es="Planta maestra que nos recuerda la importancia de caminar sin ego. Ayuda a ver el inconsciente, enseñando a observar el mundo interior y reconocerse en el amor."
+               data-en="Master plant that reminds us of the importance of walking without ego. It helps us see our unconscious, teaching people to observe their inner world and recognize themselves in love.">
+              Planta maestra que nos recuerda la importancia de caminar sin ego. Ayuda a ver el inconsciente, enseñando a observar el mundo interior y reconocerse en el amor.
+            </p>
+            <p data-es="Usada desde hace miles de años por los pueblos de la amazonía para curar, adquirir conocimiento y desarrollar la conciencia. No la ofrecemos como purgante: la ofrecemos como camino de autoconocimiento."
+               data-en="Used for thousands of years by the peoples of the Amazon to heal, to gain knowledge, and to develop consciousness. We do not offer it as a purgative: we offer it as a path of self-knowledge.">
+              Usada desde hace miles de años por los pueblos de la amazonía para curar, adquirir conocimiento y desarrollar la conciencia. No la ofrecemos como purgante: la ofrecemos como camino de autoconocimiento.
+            </p>
+            <ul class="medicina__meta">
+              <li data-es="Ceremonia nocturna" data-en="Night ceremony">Ceremonia nocturna</li>
+              <li data-es="≈ 5 horas" data-en="≈ 5 hours">≈ 5 horas</li>
+              <li data-es="Dentro del templo" data-en="Inside the temple">Dentro del templo</li>
+            </ul>
+            <button class="planta-card__cta" id="ayahuascaOpen" type="button"
+                    aria-haspopup="dialog" aria-controls="ayahuascaModal"
+                    data-es="Ceremonias y preparación →" data-en="Ceremonies and preparation →">Ceremonias y preparación →</button>
+          </div>
+        </article>
+
+        <article class="medicina medicina--reverse reveal-item">
+          <div class="medicina__media">
+            <img src="images/gallery/retiro-07.webp"
+                 alt="Grupo en círculo en Pisaq: la ceremonia de Wachuma se camina al aire libre"
+                 loading="lazy" width="1536" height="2048" />
+          </div>
+          <div class="medicina__card">
+            <p class="medicina__eyebrow" data-es="Medicina del sol" data-en="Medicine of the sun">Medicina del sol</p>
+            <h3 class="medicina__name">Wachuma</h3>
+            <p class="medicina__quechua" data-es='"Sin Cabeza" en Quechua' data-en='"Headless" in Quechua'>"Sin Cabeza" en Quechua</p>
+            <div class="medicina__rule" aria-hidden="true"></div>
+            <p data-es="Medicina que nos conecta con los cuatro abuelos: agua, fuego, tierra y aire. A través de ella, uno entra en la Madre Naturaleza y la vibración del Padre Espíritu, dejando de lado la mente para sentir con el corazón."
+               data-en="Medicine that connects us with the four grandparents: water, fire, earth, and air. Through it, one enters into Mother Nature and the vibration of Father Spirit, setting aside the mind to feel with the heart.">
+              Medicina que nos conecta con los cuatro abuelos: agua, fuego, tierra y aire. A través de ella, uno entra en la Madre Naturaleza y la vibración del Padre Espíritu, dejando de lado la mente para sentir con el corazón.
+            </p>
+            <p data-es="Nos trae conciencia de la vida. Por medio de la tradición podemos acceder a una nueva visión de nuestras vidas: lo cotidiano se vuelve claro y lo pesado se vuelve ligero."
+               data-en="It brings us consciousness of life. Through the tradition we can reach a new vision of our lives: the everyday becomes clear and the heavy becomes light.">
+              Nos trae conciencia de la vida. Por medio de la tradición podemos acceder a una nueva visión de nuestras vidas: lo cotidiano se vuelve claro y lo pesado se vuelve ligero.
+            </p>
+            <ul class="medicina__meta">
+              <li data-es="Ceremonia de día" data-en="Daytime ceremony">Ceremonia de día</li>
+              <li data-es="8 – 12 horas" data-en="8 – 12 hours">8 – 12 horas</li>
+              <li data-es="Al aire libre, frente a los Apus" data-en="Outdoors, before the Apus">Al aire libre, frente a los Apus</li>
+            </ul>
+            <button class="planta-card__cta" id="wachumaOpen" type="button"
+                    aria-haspopup="dialog" aria-controls="wachumaModal"
+                    data-es="Ceremonias y preparación →" data-en="Ceremonies and preparation →">Ceremonias y preparación →</button>
+          </div>
+        </article>
+
       </div>
       <p class="plantas__cite">
         <em data-es='"Las plantas son las primeras formas de vida, la base para el desarrollo de los niveles de conciencia..." — Evans y Hofmann, 2000' data-en='"Plants are the first forms of life, the basis for the development of levels of consciousness..." — Evans and Hofmann, 2000'>
           "Las plantas son las primeras formas de vida, la base para el desarrollo de los niveles de conciencia..." — Evans y Hofmann, 2000
         </em>
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ AGENDA ══
+       CÓMO EDITAR: cada mes es un <article class="agenda__card">.
+       Dentro, cada fecha es un <div class="agenda__event"> con:
+         .agenda__day    → el día o rango  (ej. "Viernes 18")
+         .agenda__what   → qué se realiza  (ej. "Ceremonia de Ayahuasca")
+         .agenda__status → estado. Usa una de estas tres clases:
+              --open    Inscripciones abiertas
+              --soon    Fecha por confirmar
+              --closed  Inscripciones cerradas
+       Si un mes no tiene fechas, deja solo <p class="agenda__empty">.
+  ══ -->
+  <section class="agenda reveal" id="agenda">
+    <div class="container">
+      <p class="section-eyebrow" data-es="Calendario" data-en="Calendar">Calendario</p>
+      <h2 class="section-title" data-es="Agenda" data-en="Calendar">Agenda</h2>
+      <p class="agenda__lead"
+         data-es="Aquí encontrarás nuestros próximos retiros, ceremonias y viajes. Los grupos son reducidos y los cupos se confirman por orden de inscripción."
+         data-en="Here you will find our upcoming retreats, ceremonies, and journeys. Groups are small, and places are confirmed in order of enrollment.">
+        Aquí encontrarás nuestros próximos retiros, ceremonias y viajes. Los grupos son reducidos y los cupos se confirman por orden de inscripción.
+      </p>
+
+      <article class="agenda__featured reveal-item">
+        <div>
+          <span class="agenda__featured-tag" data-es="Retiro principal" data-en="Main retreat">Retiro principal</span>
+          <h3 class="agenda__featured-name">Capac Inti Raymi</h3>
+          <p class="agenda__featured-dates" data-es="22 — 28 de diciembre, 2026" data-en="December 22 — 28, 2026">22 — 28 de diciembre, 2026</p>
+          <p class="agenda__featured-body"
+             data-es="Siete días en el Valle Sagrado del Cusco: ceremonias de Ayahuasca y Wachuma, Fuego Sagrado, Pisaq, Ausangate y los templos del Tawantinsuyo. Alojamiento y alimentación vegetariana incluidos."
+             data-en="Seven days in the Sacred Valley of Cusco: Ayahuasca and Wachuma ceremonies, Sacred Fire, Pisaq, Ausangate, and the temples of the Tawantinsuyo. Lodging and vegetarian meals included.">
+            Siete días en el Valle Sagrado del Cusco: ceremonias de Ayahuasca y Wachuma, Fuego Sagrado, Pisaq, Ausangate y los templos del Tawantinsuyo. Alojamiento y alimentación vegetariana incluidos.
+          </p>
+        </div>
+        <a href="#precio" class="agenda__cta" data-es="Reservar mi lugar →" data-en="Book my place →">Reservar mi lugar →</a>
+      </article>
+
+      <div class="agenda__grid">
+
+        <article class="agenda__card reveal-item">
+          <h3 class="agenda__month" data-es="Septiembre 2026" data-en="September 2026">Septiembre 2026</h3>
+          <div class="agenda__events">
+            <div class="agenda__event">
+              <p class="agenda__day" data-es="Fecha por confirmar" data-en="Date to be confirmed">Fecha por confirmar</p>
+              <p class="agenda__what" data-es="Ceremonia de Ayahuasca" data-en="Ayahuasca Ceremony">Ceremonia de Ayahuasca</p>
+              <span class="agenda__status agenda__status--soon" data-es="Consultar" data-en="Ask us">Consultar</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="agenda__card reveal-item">
+          <h3 class="agenda__month" data-es="Octubre 2026" data-en="October 2026">Octubre 2026</h3>
+          <div class="agenda__events">
+            <div class="agenda__event">
+              <p class="agenda__day" data-es="Fecha por confirmar" data-en="Date to be confirmed">Fecha por confirmar</p>
+              <p class="agenda__what" data-es="Ceremonia de Wachuma — Fuego Sagrado" data-en="Wachuma Ceremony — Sacred Fire">Ceremonia de Wachuma — Fuego Sagrado</p>
+              <span class="agenda__status agenda__status--soon" data-es="Consultar" data-en="Ask us">Consultar</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="agenda__card reveal-item">
+          <h3 class="agenda__month" data-es="Noviembre 2026" data-en="November 2026">Noviembre 2026</h3>
+          <div class="agenda__events">
+            <div class="agenda__event">
+              <p class="agenda__day" data-es="Fecha por confirmar" data-en="Date to be confirmed">Fecha por confirmar</p>
+              <p class="agenda__what" data-es="Dieta tradicional — de una semana a un mes" data-en="Traditional diet — from one week to one month">Dieta tradicional — de una semana a un mes</p>
+              <span class="agenda__status agenda__status--soon" data-es="Consultar" data-en="Ask us">Consultar</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="agenda__card reveal-item">
+          <h3 class="agenda__month" data-es="Diciembre 2026" data-en="December 2026">Diciembre 2026</h3>
+          <div class="agenda__events">
+            <div class="agenda__event">
+              <p class="agenda__day" data-es="22 — 28 de diciembre" data-en="December 22 — 28">22 — 28 de diciembre</p>
+              <p class="agenda__what" data-es="Capac Inti Raymi — Retiro de 7 días en el Valle Sagrado" data-en="Capac Inti Raymi — 7-day retreat in the Sacred Valley">Capac Inti Raymi — Retiro de 7 días en el Valle Sagrado</p>
+              <span class="agenda__status agenda__status--open" data-es="Inscripciones abiertas" data-en="Enrollment open">Inscripciones abiertas</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="agenda__card reveal-item">
+          <h3 class="agenda__month" data-es="Enero 2027" data-en="January 2027">Enero 2027</h3>
+          <div class="agenda__events">
+            <p class="agenda__empty" data-es="No hay fechas en programa." data-en="No dates scheduled.">No hay fechas en programa.</p>
+          </div>
+        </article>
+
+        <article class="agenda__card reveal-item">
+          <h3 class="agenda__month" data-es="Febrero 2027" data-en="February 2027">Febrero 2027</h3>
+          <div class="agenda__events">
+            <p class="agenda__empty" data-es="No hay fechas en programa." data-en="No dates scheduled.">No hay fechas en programa.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="agenda__note"
+         data-es="¿No encuentras una fecha que te acomode? También organizamos ceremonias y dietas privadas durante todo el año. Escríbenos y armamos el calendario contigo."
+         data-en="Can't find a date that works for you? We also arrange private ceremonies and diets year-round. Write to us and we'll build the calendar with you.">
+        ¿No encuentras una fecha que te acomode? También organizamos ceremonias y dietas privadas durante todo el año. Escríbenos y armamos el calendario contigo.
       </p>
     </div>
   </section>
@@ -1155,9 +1306,9 @@
 
         <article class="pmodal__section">
           <h3 class="pmodal__heading" data-es="Cómo se vive la ceremonia" data-en="How the Ceremony Unfolds">Cómo se vive la ceremonia</h3>
-          <img class="pmodal__img" src="images/gallery/retiro-07.webp"
-               alt="Grupo en círculo en Pisaq: la ceremonia se camina al aire libre"
-               loading="lazy" width="1536" height="2048" />
+          <img class="pmodal__img" src="images/gallery/retiro-02.webp"
+               alt="Altar tallado en la roca: uno de los sitios sagrados que se visitan"
+               loading="lazy" width="1200" height="1600" />
           <p>La medicina se comparte temprano y su trabajo acompaña entre ocho y doce horas, hasta el atardecer. Es una ceremonia abierta y luminosa: se camina, se visitan los sitios sagrados, se comparte el silencio y se cierra en círculo alrededor del fuego.</p>
           <p>Las primeras horas suelen traer limpieza física; después llega la claridad. Ambos momentos son parte del mismo trabajo y no hay que temerles.</p>
           <p>El maestro acompaña a cada participante de forma personal. La medicina abre, la tradición sostiene y el grupo cuida: por eso el marco ceremonial no es un adorno, es lo que hace segura y profunda la experiencia.</p>

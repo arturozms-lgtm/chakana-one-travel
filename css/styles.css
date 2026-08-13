@@ -737,54 +737,150 @@ ul { list-style: none; }
   background: var(--c-bg-2);
 }
 
-.plantas__grid {
+.plantas__lead {
+  max-width: 620px;
+  margin: 0 auto clamp(3rem, 6vw, 4.5rem);
+  text-align: center;
+  color: var(--c-text);
+  font-size: 1.05rem;
+}
+
+/* ── Bloques de medicina (foto + tarjeta superpuesta) ── */
+.medicinas {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3.5rem, 7vw, 6rem);
+  margin-bottom: clamp(3rem, 6vw, 4.5rem);
+}
+
+.medicina {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
 }
 
-.planta-card {
+.medicina__media {
+  position: relative;
+  overflow: hidden;
+}
+
+.medicina__media img {
+  width: 100%;
+  height: clamp(360px, 40vw, 520px);
+  object-fit: cover;
+  filter: saturate(0.9) brightness(0.9);
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              filter var(--transition);
+}
+
+.medicina:hover .medicina__media img {
+  transform: scale(1.04);
+  filter: saturate(1) brightness(1);
+}
+
+.medicina__card {
+  position: relative;
+  z-index: 1;
+  margin-left: clamp(-4rem, -3vw, -2rem);
   background: var(--c-bg-3);
-  border: 1px solid rgba(200,146,42,0.15);
-  padding: 2.5rem 2rem;
-  transition: var(--transition);
+  border: 1px solid rgba(200,146,42,0.18);
+  padding: clamp(1.75rem, 3.2vw, 2.75rem);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.45);
 }
 
-.planta-card:hover {
-  border-color: rgba(200,146,42,0.4);
-  transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+.medicina--reverse .medicina__media { order: 2; }
+
+.medicina--reverse .medicina__card {
+  order: 1;
+  margin-left: 0;
+  margin-right: clamp(-4rem, -3vw, -2rem);
 }
 
-.planta-card__icon {
-  font-size: 2rem;
+.medicina__eyebrow {
+  font-family: var(--f-util);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
   color: var(--c-gold);
-  margin-bottom: 1.25rem;
-  opacity: 0.8;
+  margin-bottom: 0.75rem;
 }
 
-.planta-card__name {
+.medicina__name {
   font-family: var(--f-display);
-  font-size: 1.5rem;
+  font-size: clamp(1.75rem, 3.4vw, 2.4rem);
   font-weight: 400;
+  line-height: 1.15;
   color: var(--c-white);
-  margin-bottom: 0.25rem;
 }
 
-.planta-card__subtitle {
+.medicina__quechua {
   font-family: var(--f-body);
   font-style: italic;
-  color: var(--c-gold);
-  font-size: 0.9rem;
-  margin-bottom: 1.25rem;
-  opacity: 0.8;
+  color: var(--c-mist);
+  font-size: 0.95rem;
+  opacity: 0.85;
 }
 
-.planta-card__body {
-  font-size: 0.95rem;
+.medicina__rule {
+  width: 56px;
+  height: 1px;
+  background: var(--c-gold);
+  opacity: 0.55;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.medicina__card p {
+  font-size: 0.98rem;
   line-height: 1.8;
   color: var(--c-text);
+}
+
+.medicina__card p + p { margin-top: 1rem; }
+
+.medicina__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+}
+
+.medicina__meta li {
+  font-family: var(--f-util);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-mist);
+  border: 1px solid rgba(200,146,42,0.22);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .medicina {
+    grid-template-columns: 1fr;
+  }
+  .medicina__media img { height: clamp(240px, 52vw, 340px); }
+  .medicina__card,
+  .medicina--reverse .medicina__card {
+    order: 2;
+    margin: -2.5rem 1.25rem 0;
+  }
+  .medicina--reverse .medicina__media { order: 1; }
+}
+
+@media (max-width: 480px) {
+  .medicina__card,
+  .medicina--reverse .medicina__card { margin: -1.75rem 0.75rem 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .medicina__media img,
+  .medicina:hover .medicina__media img {
+    transition: none;
+    transform: none;
+  }
 }
 
 .plantas__cite {
@@ -796,6 +892,182 @@ ul { list-style: none; }
   line-height: 1.7;
   border-top: 1px solid rgba(200,146,42,0.1);
   padding-top: 2rem;
+}
+
+/* ── AGENDA ────────────────────────────────────────── */
+.agenda {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  background: var(--c-bg);
+}
+
+.agenda__lead {
+  max-width: 620px;
+  margin: 0 auto clamp(2.5rem, 5vw, 3.5rem);
+  text-align: center;
+  color: var(--c-text);
+  font-size: 1.05rem;
+}
+
+/* Retiro destacado */
+.agenda__featured {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: center;
+  background: linear-gradient(160deg, var(--c-bg-3), var(--c-bg-2));
+  border: 1px solid rgba(200,146,42,0.35);
+  padding: clamp(1.75rem, 3.5vw, 2.75rem);
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+}
+
+.agenda__featured-tag {
+  display: inline-block;
+  font-family: var(--f-util);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-bg);
+  background: var(--c-gold);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.agenda__featured-name {
+  font-family: var(--f-display);
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+  font-weight: 400;
+  color: var(--c-white);
+  line-height: 1.2;
+}
+
+.agenda__featured-dates {
+  font-family: var(--f-util);
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin: 0.6rem 0 1rem;
+}
+
+.agenda__featured-body {
+  color: var(--c-text);
+  font-size: 0.98rem;
+  line-height: 1.8;
+  max-width: 52ch;
+}
+
+/* Rejilla de meses */
+.agenda__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.agenda__card {
+  display: flex;
+  flex-direction: column;
+  background: var(--c-bg-2);
+  border: 1px solid rgba(200,146,42,0.15);
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.agenda__card:hover {
+  border-color: rgba(200,146,42,0.35);
+  transform: translateY(-3px);
+}
+
+.agenda__month {
+  font-family: var(--f-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--c-white);
+  background: var(--c-bg-3);
+  border-bottom: 1px solid rgba(200,146,42,0.2);
+  padding: 0.95rem 1.25rem;
+}
+
+.agenda__events {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  padding: 1.5rem 1.25rem;
+}
+
+.agenda__day {
+  font-family: var(--f-util);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-bottom: 0.3rem;
+}
+
+.agenda__what {
+  color: var(--c-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.agenda__status {
+  display: inline-block;
+  font-family: var(--f-util);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid;
+  border-radius: 999px;
+  padding: 0.28rem 0.7rem;
+  margin-top: 0.55rem;
+}
+
+.agenda__status--open {
+  color: var(--c-gold-lt);
+  border-color: rgba(224,173,82,0.45);
+}
+
+.agenda__status--soon {
+  color: var(--c-text);
+  border-color: rgba(191,179,154,0.3);
+}
+
+.agenda__status--closed {
+  color: var(--c-mist);
+  border-color: rgba(212,201,176,0.22);
+  opacity: 0.75;
+}
+
+.agenda__empty {
+  color: var(--c-text);
+  opacity: 0.75;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.agenda__note {
+  max-width: 620px;
+  margin: clamp(2.5rem, 5vw, 3.5rem) auto 0;
+  text-align: center;
+  color: var(--c-text);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 720px) {
+  .agenda__featured { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .agenda__card,
+  .agenda__card:hover { transition: none; transform: none; }
 }
 
 /* ── LUGAR ─────────────────────────────────────────── */
@@ -2725,7 +2997,8 @@ html.intro-lock { overflow: hidden; }
 ═══════════════════════════════════════════════════════ */
 html.pmodal-lock { overflow: hidden; }
 
-.planta-card__cta {
+.planta-card__cta,
+.agenda__cta {
   display: inline-block;
   margin-top: 1.5rem;
   background: transparent;
@@ -2745,7 +3018,9 @@ html.pmodal-lock { overflow: hidden; }
 }
 
 .planta-card__cta:hover,
-.planta-card__cta:focus-visible {
+.planta-card__cta:focus-visible,
+.agenda__cta:hover,
+.agenda__cta:focus-visible {
   color: var(--c-bg);
   background: var(--c-gold);
   border-color: var(--c-gold);
