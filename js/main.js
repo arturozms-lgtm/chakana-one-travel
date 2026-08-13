@@ -32,10 +32,10 @@
     document.documentElement.classList.remove('intro-lock');
   }
 
-  /* ── Modal Ayahuasca ──────────────────────────────── */
-  (function () {
-    const modal = document.getElementById('ayahuascaModal');
-    const openBtn = document.getElementById('ayahuascaOpen');
+  /* ── Modales de Plantas (Ayahuasca · Wachuma) ─────── */
+  function initPlantaModal(modalId, openBtnId) {
+    const modal = document.getElementById(modalId);
+    const openBtn = document.getElementById(openBtnId);
     if (!modal || !openBtn) return;
 
     const closeEls = modal.querySelectorAll('[data-pmodal-close]');
@@ -58,7 +58,10 @@
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && !modal.hidden) closeModal();
     });
-  })();
+  }
+
+  initPlantaModal('ayahuascaModal', 'ayahuascaOpen');
+  initPlantaModal('wachumaModal', 'wachumaOpen');
 
   /* ── NAV scroll ───────────────────────────────────── */
   const nav = document.getElementById('nav');
