@@ -114,6 +114,10 @@
       const text = el.getAttribute(`data-${lang}`);
       if (text) el.textContent = text;
     });
+    document.querySelectorAll('[data-ph-es]').forEach(el => {
+      const ph = el.getAttribute(`data-ph-${lang}`);
+      if (ph) el.placeholder = ph;
+    });
   }
 
   langToggle?.addEventListener('click', () => {
@@ -479,6 +483,204 @@
         if (!panel) return;
         const isOpen = panel.classList.toggle('open');
         btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    });
+  })();
+
+  /* ── Cuestionario de inscripción ──────────────────── */
+  (function () {
+    const form = document.getElementById('inscForm');
+    if (!form) return;
+
+    /* ═══ CONFIGURACIÓN — cómo te llegan las inscripciones ═══
+       1) ENDPOINT (recomendado): pega aquí la URL de tu servicio de formularios.
+          Formspree  → https://formspree.io/f/tuCodigo
+          FormSubmit → https://formsubmit.co/ajax/tucorreo@ejemplo.com
+          Las respuestas viajan en el cuerpo del envío, no en la URL.
+       2) Si ENDPOINT queda vacío y pones EMAIL, se abre el correo del visitante
+          con todas las respuestas ya escritas, listo para enviarte.
+       3) Si ambos quedan vacíos, se copian las respuestas al portapapeles y se
+          abre WhatsApp con un aviso corto (sin datos de salud en la URL).      */
+    const ENDPOINT = '';
+    const EMAIL    = 'arturozms@gmail.com';   /* ← dirección donde te llegan las inscripciones */
+    const WHATSAPP = '51949745661';
+
+    const statusEl = document.getElementById('inscStatus');
+    const copyBtn  = document.getElementById('inscCopy');
+    const submitBtn = form.querySelector('.insc__submit');
+
+    const T = {
+      fix:   { es: 'Revisa los campos marcados en rojo, por favor.',
+               en: 'Please review the fields marked in red.' },
+      send:  { es: 'Enviando…', en: 'Sending…' },
+      ok:    { es: '¡Cuestionario enviado! Te responderemos por WhatsApp o email.',
+               en: 'Questionnaire sent! We will reply by WhatsApp or email.' },
+      err:   { es: 'No pudimos enviarlo. Copiamos tus respuestas: pégalas por WhatsApp y las recibimos igual.',
+               en: 'We could not send it. Your answers were copied: paste them on WhatsApp and we will get them.' },
+      mail:  { es: 'Abrimos tu correo con el cuestionario ya escrito: solo pulsa enviar. También copiamos tus respuestas por si prefieres pegarlas por WhatsApp.',
+               en: 'We opened your email app with the questionnaire ready: just hit send. We also copied your answers in case you prefer to paste them on WhatsApp.' },
+      wa:    { es: 'Respuestas copiadas. En WhatsApp pega el mensaje y envíalo, por favor.',
+               en: 'Answers copied. Paste the message in WhatsApp and send it, please.' },
+      thanksT: { es: 'Gracias por tu confianza', en: 'Thank you for your trust' },
+      thanksB: { es: 'Hemos recibido tu cuestionario. Lo leemos con calma y te escribimos para confirmar tu lugar.',
+                 en: 'We have received your questionnaire. We will read it carefully and write to confirm your place.' }
+    };
+
+    const t = key => T[key][document.documentElement.lang === 'en' ? 'en' : 'es'];
+
+    function setStatus(msg, kind) {
+      statusEl.textContent = msg || '';
+      statusEl.classList.remove('insc__status--ok', 'insc__status--err');
+      if (kind) statusEl.classList.add('insc__status--' + kind);
+    }
+
+    /* ── Lectura de campos ── */
+    function fieldLabel(field) {
+      if (field.querySelector('.insc__consent')) {
+        return document.documentElement.lang === 'en'
+          ? 'Confirms the information is true' : 'Confirma que la información es verdadera';
+      }
+      const l = field.querySelector('.insc__label');
+      return l ? l.textContent.replace(/\s*\*\s*$/, '').replace(/\s+/g, ' ').trim() : '';
+    }
+
+    function fieldValue(field) {
+      const radios = field.querySelectorAll('input[type="radio"]');
+      if (radios.length) {
+        const checked = Array.from(radios).find(r => r.checked);
+        return checked ? checked.value : '';
+      }
+      const cb = field.querySelector('input[type="checkbox"]');
+      if (cb) return cb.checked ? 'Sí' : 'No';
+      const el = field.querySelector('input, select, textarea');
+      return el ? el.value.trim() : '';
+    }
+
+    function buildSummary() {
+      const lines = ['CUESTIONARIO DE INSCRIPCIÓN — CHAKANA ONE TRAVEL'];
+      form.querySelectorAll('.insc__block').forEach(block => {
+        const legend = block.querySelector('.insc__legend');
+        lines.push('', '── ' + (legend ? legend.textContent.trim().toUpperCase() : '') + ' ──');
+        block.querySelectorAll('.insc__field').forEach(field => {
+          lines.push(fieldLabel(field) + ': ' + (fieldValue(field) || '—'));
+        });
+      });
+      return lines.join('\n');
+    }
+
+    /* ── Validación ── */
+    function validate() {
+      let firstBad = null;
+      form.querySelectorAll('.insc__field').forEach(field => {
+        const req = field.querySelector('[required]');
+        if (!req) return;
+        let ok;
+        if (req.type === 'radio') {
+          ok = !!field.querySelector('input[type="radio"]:checked');
+        } else if (req.type === 'checkbox') {
+          ok = req.checked;
+        } else if (req.type === 'email') {
+          ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(req.value.trim());
+        } else {
+          ok = req.value.trim() !== '';
+        }
+        field.classList.toggle('has-error', !ok);
+        if (!ok && !firstBad) firstBad = req;
+      });
+      return firstBad;
+    }
+
+    ['input', 'change'].forEach(evt => {
+      form.addEventListener(evt, e => {
+        const field = e.target.closest('.insc__field');
+        if (field) field.classList.remove('has-error');
+      });
+    });
+
+    /* ── Copiar respuestas ── */
+    function copySummary() {
+      const text = buildSummary();
+      if (navigator.clipboard?.writeText) {
+        return navigator.clipboard.writeText(text).then(showToast).catch(() => fallbackCopy(text));
+      }
+      fallbackCopy(text);
+      return Promise.resolve();
+    }
+
+    copyBtn?.addEventListener('click', () => { copySummary(); });
+
+    /* ── Pantalla de gracias ── */
+    function showThanks() {
+      const box = document.createElement('div');
+      box.className = 'insc__thanks';
+      box.innerHTML =
+        '<h3></h3><p></p>' +
+        '<a class="btn btn--gold" target="_blank" rel="noopener" ' +
+        'href="https://wa.me/' + WHATSAPP + '">WhatsApp</a>';
+      box.querySelector('h3').textContent = t('thanksT');
+      box.querySelector('p').textContent = t('thanksB');
+      form.replaceWith(box);
+      box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    /* ── Envío ── */
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const bad = validate();
+      if (bad) {
+        setStatus(t('fix'), 'err');
+        bad.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        bad.focus({ preventScroll: true });
+        return;
+      }
+
+      const summary = buildSummary();
+      const nombre  = document.getElementById('inscNombre').value.trim();
+      const apellido = document.getElementById('inscApellido').value.trim();
+      const evento  = document.getElementById('inscEvento').value;
+      const fecha   = document.getElementById('inscFecha').value;
+      const asunto  = 'Inscripción — ' + nombre + ' ' + apellido + ' — ' + evento;
+
+      /* 1) Servicio de formularios (POST, datos fuera de la URL) */
+      if (ENDPOINT) {
+        const data = new FormData(form);
+        data.append('_subject', asunto);
+        data.append('resumen', summary);
+        setStatus(t('send'));
+        submitBtn.disabled = true;
+
+        fetch(ENDPOINT, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
+          .then(res => {
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            setStatus(t('ok'), 'ok');
+            showThanks();
+          })
+          .catch(() => {
+            submitBtn.disabled = false;
+            copySummary();
+            setStatus(t('err'), 'err');
+          });
+        return;
+      }
+
+      /* 2) Correo del visitante con todo escrito */
+      if (EMAIL) {
+        window.location.href = 'mailto:' + EMAIL +
+          '?subject=' + encodeURIComponent(asunto) +
+          '&body=' + encodeURIComponent(summary);
+        copySummary();
+        setStatus(t('mail'), 'ok');
+        return;
+      }
+
+      /* 3) WhatsApp: aviso corto en la URL + respuestas en el portapapeles */
+      const aviso = 'Hola Kurmi, acabo de completar el cuestionario de inscripción. ' +
+                    'Soy ' + nombre + ' ' + apellido + '. Quiero participar en: ' + evento +
+                    (fecha ? ' (' + fecha + ')' : '') + '. Te pego mis respuestas a continuación.';
+      copySummary().then(() => {
+        setStatus(t('wa'), 'ok');
+        window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(aviso), '_blank', 'noopener');
       });
     });
   })();

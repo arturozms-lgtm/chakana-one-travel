@@ -154,6 +154,7 @@
         <a href="#lugar" class="nav__link" data-es="Lugar" data-en="Venue">Lugar</a>
         <a href="#galeria" class="nav__link" data-es="Galería" data-en="Gallery">Galería</a>
         <a href="#precio" class="nav__link" data-es="Inscripción" data-en="Enroll">Inscripción</a>
+        <a href="#inscripcion" class="nav__link" data-es="Cuestionario" data-en="Questionnaire">Cuestionario</a>
         <a href="#faq" class="nav__link">FAQ</a>
         <button class="lang-toggle" id="langToggle">EN</button>
       </div>
@@ -1079,6 +1080,349 @@
         <div class="copy-toast" id="copyToast" data-es="¡Copiado!" data-en="Copied!">¡Copiado!</div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CUESTIONARIO DE INSCRIPCIÓN ══ -->
+  <section class="insc reveal" id="inscripcion">
+    <div class="container">
+      <p class="section-eyebrow"
+         data-es="Para participar en una ceremonia o un retiro"
+         data-en="To join a ceremony or a retreat">Para participar en una ceremonia o un retiro</p>
+      <h2 class="section-title"
+          data-es="Cuestionario de Inscripción"
+          data-en="Enrollment Questionnaire">Cuestionario de Inscripción</h2>
+
+      <p class="insc__lead"
+         data-es="Rellena el siguiente cuestionario de inscripción indicando la fecha en la que quieres participar."
+         data-en="Fill in the following enrollment questionnaire, indicating the date you wish to attend.">
+        Rellena el siguiente cuestionario de inscripción indicando la fecha en la que quieres participar.
+      </p>
+
+      <div class="insc__alert reveal-item">
+        <p>
+          <strong data-es="IMPORTANTE:" data-en="IMPORTANT:">IMPORTANTE:</strong>
+          <span data-es="por favor rellena el cuestionario de forma exhaustiva y detallada, no ocultes ningún evento importante sobre tu vida y tu estado de salud. Esto es muy importante para nosotros para cuidar de tu experiencia."
+                data-en="please fill in the questionnaire thoroughly and in detail; do not hide any important event about your life or your state of health. This is very important for us in order to take care of your experience.">
+            por favor rellena el cuestionario de forma exhaustiva y detallada, no ocultes ningún evento importante sobre tu vida y tu estado de salud. Esto es muy importante para nosotros para cuidar de tu experiencia.
+          </span>
+        </p>
+        <p data-es="Por favor, indica una fecha exacta según la disponibilidad indicada en la agenda, gracias."
+           data-en="Please indicate an exact date according to the availability shown in the calendar, thank you.">
+          Por favor, indica una fecha exacta según la disponibilidad indicada en la agenda, gracias.
+        </p>
+      </div>
+
+      <form class="insc__form reveal-item" id="inscForm" novalidate autocomplete="on">
+
+        <!-- ── Bloque 1: Registro ── -->
+        <fieldset class="insc__block">
+          <legend class="insc__legend" data-es="Registro" data-en="Registration">Registro</legend>
+
+          <div class="insc__grid">
+
+            <div class="insc__field">
+              <label class="insc__label" for="inscNombre">
+                <span data-es="Nombre" data-en="First name">Nombre</span> <b class="insc__req">*</b>
+              </label>
+              <input class="insc__input" type="text" id="inscNombre" name="nombre"
+                     autocomplete="given-name" required />
+              <p class="insc__error" data-es="Escribe tu nombre." data-en="Please enter your first name."></p>
+            </div>
+
+            <div class="insc__field">
+              <label class="insc__label" for="inscApellido">
+                <span data-es="Apellido" data-en="Last name">Apellido</span>
+              </label>
+              <input class="insc__input" type="text" id="inscApellido" name="apellido"
+                     autocomplete="family-name" />
+            </div>
+
+            <div class="insc__field">
+              <label class="insc__label" for="inscNacimiento">
+                <span data-es="Fecha de nacimiento" data-en="Date of birth">Fecha de nacimiento</span> <b class="insc__req">*</b>
+              </label>
+              <input class="insc__input" type="date" id="inscNacimiento" name="nacimiento"
+                     autocomplete="bday" required />
+              <p class="insc__error" data-es="Indica tu fecha de nacimiento." data-en="Please enter your date of birth."></p>
+            </div>
+
+            <div class="insc__field">
+              <label class="insc__label" for="inscEmail">
+                <span data-es="Email" data-en="Email">Email</span> <b class="insc__req">*</b>
+              </label>
+              <input class="insc__input" type="email" id="inscEmail" name="email"
+                     autocomplete="email" required />
+              <p class="insc__error" data-es="Escribe un email válido." data-en="Please enter a valid email."></p>
+            </div>
+
+            <div class="insc__field insc__field--sm">
+              <label class="insc__label" for="inscPrefijo">
+                <span data-es="Prefijo" data-en="Country code">Prefijo</span> <b class="insc__req">*</b>
+              </label>
+              <select class="insc__input insc__select" id="inscPrefijo" name="prefijo" required>
+                <option value="PE +51" selected>PE +51</option>
+                <option value="AR +54">AR +54</option>
+                <option value="BO +591">BO +591</option>
+                <option value="BR +55">BR +55</option>
+                <option value="CL +56">CL +56</option>
+                <option value="CO +57">CO +57</option>
+                <option value="CR +506">CR +506</option>
+                <option value="CU +53">CU +53</option>
+                <option value="DO +1809">DO +1809</option>
+                <option value="EC +593">EC +593</option>
+                <option value="SV +503">SV +503</option>
+                <option value="GT +502">GT +502</option>
+                <option value="HN +504">HN +504</option>
+                <option value="MX +52">MX +52</option>
+                <option value="NI +505">NI +505</option>
+                <option value="PA +507">PA +507</option>
+                <option value="PY +595">PY +595</option>
+                <option value="PR +1787">PR +1787</option>
+                <option value="UY +598">UY +598</option>
+                <option value="VE +58">VE +58</option>
+                <option value="US/CA +1">US/CA +1</option>
+                <option value="ES +34">ES +34</option>
+                <option value="PT +351">PT +351</option>
+                <option value="FR +33">FR +33</option>
+                <option value="IT +39">IT +39</option>
+                <option value="DE +49">DE +49</option>
+                <option value="NL +31">NL +31</option>
+                <option value="CH +41">CH +41</option>
+                <option value="UK +44">UK +44</option>
+                <option value="IE +353">IE +353</option>
+                <option value="AU +61">AU +61</option>
+                <option value="IL +972">IL +972</option>
+                <option value="otro" data-es="Otro" data-en="Other">Otro</option>
+              </select>
+            </div>
+
+            <div class="insc__field insc__field--c3">
+              <label class="insc__label" for="inscTelefono">
+                <span data-es="N° Tel./ WhatsApp" data-en="Phone / WhatsApp">N° Tel./ WhatsApp</span> <b class="insc__req">*</b>
+              </label>
+              <input class="insc__input" type="tel" id="inscTelefono" name="telefono"
+                     inputmode="tel" autocomplete="tel"
+                     placeholder="Teléfono" data-ph-es="Teléfono" data-ph-en="Phone number" required />
+              <p class="insc__error" data-es="Escribe tu número de teléfono." data-en="Please enter your phone number."></p>
+            </div>
+
+            <div class="insc__field insc__field--c3">
+              <label class="insc__label" for="inscPais">
+                <span data-es="País de proveniencia" data-en="Country of origin">País de proveniencia</span>
+              </label>
+              <input class="insc__input" type="text" id="inscPais" name="pais"
+                     autocomplete="country-name" />
+            </div>
+
+            <div class="insc__field insc__field--c3">
+              <label class="insc__label" for="inscEstudios">
+                <span data-es="Estudios" data-en="Education">Estudios</span>
+              </label>
+              <input class="insc__input" type="text" id="inscEstudios" name="estudios" />
+            </div>
+
+            <div class="insc__field insc__field--c3">
+              <label class="insc__label" for="inscOcupacion">
+                <span data-es="Ocupación" data-en="Occupation">Ocupación</span>
+              </label>
+              <input class="insc__input" type="text" id="inscOcupacion" name="ocupacion" />
+            </div>
+
+            <div class="insc__field insc__field--half">
+              <label class="insc__label" for="inscTecnicas">
+                <span data-es="¿Prácticas algunas de las sig. técnicas?" data-en="Do you practise any of the following techniques?">¿Prácticas algunas de las sig. técnicas?</span> <b class="insc__req">*</b>
+              </label>
+              <input class="insc__input" type="text" id="inscTecnicas" name="tecnicas"
+                     placeholder="ej: Meditación, Yoga, Chi kung, etc..."
+                     data-ph-es="ej: Meditación, Yoga, Chi kung, etc..."
+                     data-ph-en="e.g.: Meditation, Yoga, Chi kung, etc..." required />
+              <p class="insc__error" data-es="Cuéntanos qué practicas (o escribe “ninguna”)." data-en="Tell us what you practise (or write “none”)."></p>
+            </div>
+
+            <div class="insc__field insc__field--half">
+              <label class="insc__label" for="inscPlantas">
+                <span data-es="¿Has tomado alguna planta maestra anteriormente?" data-en="Have you taken a master plant before?">¿Has tomado alguna planta maestra anteriormente?</span> <b class="insc__req">*</b>
+              </label>
+              <textarea class="insc__input insc__textarea" id="inscPlantas" name="plantas" rows="4"
+                        placeholder="Si es así ¿Con quién ha sido? ¿Cuándo? ¿Dónde?"
+                        data-ph-es="Si es así ¿Con quién ha sido? ¿Cuándo? ¿Dónde?"
+                        data-ph-en="If so, with whom? When? Where?" required></textarea>
+              <p class="insc__error" data-es="Respóndenos aquí (o escribe “no”)." data-en="Please answer here (or write “no”)."></p>
+            </div>
+
+            <div class="insc__field insc__field--half">
+              <label class="insc__label" for="inscMotivacion">
+                <span data-es="¿Cuál es tu motivación para acudir a nuestro centro?" data-en="What is your motivation for coming to our centre?">¿Cuál es tu motivación para acudir a nuestro centro?</span> <b class="insc__req">*</b>
+              </label>
+              <textarea class="insc__input insc__textarea" id="inscMotivacion" name="motivacion" rows="4"
+                        placeholder="Cuéntanos..."
+                        data-ph-es="Cuéntanos..." data-ph-en="Tell us..." required></textarea>
+              <p class="insc__error" data-es="Cuéntanos tu motivación." data-en="Please tell us your motivation."></p>
+            </div>
+
+          </div>
+        </fieldset>
+
+        <!-- ── Bloque 2: Historia y salud ── -->
+        <fieldset class="insc__block">
+          <legend class="insc__legend" data-es="Historia y salud" data-en="History &amp; health">Historia y salud</legend>
+
+          <div class="insc__grid">
+
+            <div class="insc__field insc__field--wide">
+              <label class="insc__label" for="inscEventos">
+                <span data-es="¿Hay algún evento que se considere traumático o relevante para tu vida?" data-en="Is there any event you consider traumatic or relevant in your life?">¿Hay algún evento que se considere traumático o relevante para tu vida?</span>
+              </label>
+              <textarea class="insc__input insc__textarea" id="inscEventos" name="eventos" rows="4"
+                        placeholder="Cuéntanos con confianza..."
+                        data-ph-es="Cuéntanos con confianza..."
+                        data-ph-en="Share it with us in confidence..."></textarea>
+            </div>
+
+            <div class="insc__field insc__field--half">
+              <label class="insc__label" for="inscEnfActuales">
+                <span data-es="Enfermedades actuales" data-en="Current illnesses">Enfermedades actuales</span>
+              </label>
+              <textarea class="insc__input insc__textarea" id="inscEnfActuales" name="enfermedades_actuales" rows="3"
+                        placeholder="Físicas y/o psicológicas"
+                        data-ph-es="Físicas y/o psicológicas"
+                        data-ph-en="Physical and/or psychological"></textarea>
+            </div>
+
+            <div class="insc__field insc__field--half">
+              <label class="insc__label" for="inscEnfPasadas">
+                <span data-es="Enfermedades pasadas" data-en="Past illnesses">Enfermedades pasadas</span>
+              </label>
+              <textarea class="insc__input insc__textarea" id="inscEnfPasadas" name="enfermedades_pasadas" rows="3"
+                        placeholder="Cirugías, diagnósticos, internamientos..."
+                        data-ph-es="Cirugías, diagnósticos, internamientos..."
+                        data-ph-en="Surgeries, diagnoses, hospital stays..."></textarea>
+            </div>
+
+            <div class="insc__field insc__field--wide">
+              <label class="insc__label" for="inscMedicamentos">
+                <span data-es="¿Estás tomando algún medicamento actualmente o en los últimos 15 días?" data-en="Are you taking any medication currently or in the last 15 days?">¿Estás tomando algún medicamento actualmente o en los últimos 15 días?</span> <b class="insc__req">*</b>
+              </label>
+              <textarea class="insc__input insc__textarea" id="inscMedicamentos" name="medicamentos" rows="3"
+                        placeholder="Nombre, dosis y desde cuándo. Incluye antidepresivos y ansiolíticos."
+                        data-ph-es="Nombre, dosis y desde cuándo. Incluye antidepresivos y ansiolíticos."
+                        data-ph-en="Name, dose and since when. Include antidepressants and anxiolytics." required></textarea>
+              <p class="insc__error" data-es="Respóndenos aquí (o escribe “ninguno”)." data-en="Please answer here (or write “none”)."></p>
+            </div>
+
+            <div class="insc__field insc__field--half">
+              <p class="insc__label" id="lblCarne">
+                <span data-es="¿Comes carne?" data-en="Do you eat meat?">¿Comes carne?</span> <b class="insc__req">*</b>
+              </p>
+              <div class="insc__choices" role="radiogroup" aria-labelledby="lblCarne">
+                <label class="insc__chip">
+                  <input type="radio" name="carne" value="Sí" required />
+                  <span data-es="Sí" data-en="Yes">Sí</span>
+                </label>
+                <label class="insc__chip">
+                  <input type="radio" name="carne" value="No" />
+                  <span data-es="No" data-en="No">No</span>
+                </label>
+              </div>
+              <p class="insc__error" data-es="Elige una opción." data-en="Choose an option."></p>
+            </div>
+
+            <div class="insc__field insc__field--half">
+              <p class="insc__label" id="lblAlcohol">
+                <span data-es="¿Consumes alcohol?" data-en="Do you drink alcohol?">¿Consumes alcohol?</span> <b class="insc__req">*</b>
+              </p>
+              <div class="insc__choices" role="radiogroup" aria-labelledby="lblAlcohol">
+                <label class="insc__chip">
+                  <input type="radio" name="alcohol" value="Sí" required />
+                  <span data-es="Sí" data-en="Yes">Sí</span>
+                </label>
+                <label class="insc__chip">
+                  <input type="radio" name="alcohol" value="No" />
+                  <span data-es="No" data-en="No">No</span>
+                </label>
+              </div>
+              <p class="insc__error" data-es="Elige una opción." data-en="Choose an option."></p>
+            </div>
+
+          </div>
+        </fieldset>
+
+        <!-- ── Bloque 3: Fecha ── -->
+        <fieldset class="insc__block">
+          <legend class="insc__legend" data-es="Tu fecha" data-en="Your date">Tu fecha</legend>
+
+          <div class="insc__grid">
+
+            <div class="insc__field insc__field--half">
+              <label class="insc__label" for="inscEvento">
+                <span data-es="¿Cuándo quieres asistir a ceremonia?" data-en="When do you want to attend a ceremony?">¿Cuándo quieres asistir a ceremonia?</span> <b class="insc__req">*</b>
+              </label>
+              <select class="insc__input insc__select" id="inscEvento" name="evento" required>
+                <option value="" disabled selected data-es="Seleccionar de la agenda" data-en="Select from the calendar">Seleccionar de la agenda</option>
+                <option value="Capac Inti Raymi — 22 a 28 de diciembre 2026"
+                        data-es="Capac Inti Raymi — 22 a 28 de diciembre 2026"
+                        data-en="Capac Inti Raymi — December 22–28, 2026">Capac Inti Raymi — 22 a 28 de diciembre 2026</option>
+                <option value="Ceremonia de Ayahuasca — Septiembre 2026"
+                        data-es="Ceremonia de Ayahuasca — Septiembre 2026"
+                        data-en="Ayahuasca Ceremony — September 2026">Ceremonia de Ayahuasca — Septiembre 2026</option>
+                <option value="Ceremonia de Wachuma / Fuego Sagrado — Octubre 2026"
+                        data-es="Ceremonia de Wachuma / Fuego Sagrado — Octubre 2026"
+                        data-en="Wachuma Ceremony / Sacred Fire — October 2026">Ceremonia de Wachuma / Fuego Sagrado — Octubre 2026</option>
+                <option value="Dieta tradicional — Noviembre 2026"
+                        data-es="Dieta tradicional — Noviembre 2026"
+                        data-en="Traditional diet — November 2026">Dieta tradicional — Noviembre 2026</option>
+                <option value="Ceremonia o dieta privada"
+                        data-es="Ceremonia o dieta privada (otra fecha)"
+                        data-en="Private ceremony or diet (another date)">Ceremonia o dieta privada (otra fecha)</option>
+              </select>
+              <p class="insc__error" data-es="Elige la ceremonia o retiro." data-en="Choose the ceremony or retreat."></p>
+            </div>
+
+            <div class="insc__field insc__field--half">
+              <label class="insc__label" for="inscFecha">
+                <span data-es="Fecha exacta en la que quieres participar" data-en="Exact date you wish to attend">Fecha exacta en la que quieres participar</span> <b class="insc__req">*</b>
+              </label>
+              <input class="insc__input" type="date" id="inscFecha" name="fecha" required />
+              <p class="insc__error" data-es="Indica una fecha exacta según la agenda." data-en="Please give an exact date from the calendar."></p>
+            </div>
+
+            <div class="insc__field insc__field--wide">
+              <label class="insc__label" for="inscComentarios">
+                <span data-es="¿Algo más que quieras contarnos?" data-en="Anything else you would like to tell us?">¿Algo más que quieras contarnos?</span>
+              </label>
+              <textarea class="insc__input insc__textarea" id="inscComentarios" name="comentarios" rows="3"
+                        placeholder="Opcional" data-ph-es="Opcional" data-ph-en="Optional"></textarea>
+            </div>
+
+            <div class="insc__field insc__field--wide">
+              <label class="insc__consent">
+                <input type="checkbox" id="inscConsent" name="consentimiento" required />
+                <span data-es="Declaro que la información que he dado es verdadera y completa, y autorizo a Chakana One Travel a usarla únicamente para valorar y cuidar mi participación."
+                      data-en="I declare that the information I have given is true and complete, and I authorise Chakana One Travel to use it solely to assess and care for my participation.">
+                  Declaro que la información que he dado es verdadera y completa, y autorizo a Chakana One Travel a usarla únicamente para valorar y cuidar mi participación.
+                </span>
+              </label>
+              <p class="insc__error" data-es="Necesitamos tu confirmación para continuar." data-en="We need your confirmation to continue."></p>
+            </div>
+
+          </div>
+        </fieldset>
+
+        <div class="insc__actions">
+          <button type="submit" class="btn btn--gold insc__submit"
+                  data-es="Enviar cuestionario" data-en="Send questionnaire">Enviar cuestionario</button>
+          <button type="button" class="insc__ghost" id="inscCopy"
+                  data-es="Copiar mis respuestas" data-en="Copy my answers">Copiar mis respuestas</button>
+        </div>
+
+        <p class="insc__status" id="inscStatus" role="status" aria-live="polite"></p>
+        <p class="insc__privacy"
+           data-es="Tus respuestas se envían directamente al equipo de Chakana One Travel y se tratan de forma confidencial."
+           data-en="Your answers go directly to the Chakana One Travel team and are treated confidentially.">
+          Tus respuestas se envían directamente al equipo de Chakana One Travel y se tratan de forma confidencial.
+        </p>
+      </form>
     </div>
   </section>
 
