@@ -41,14 +41,7 @@
       "name": "Lovely Heart Retreat Center",
       "address": { "@type": "PostalAddress", "addressLocality": "Calca", "addressRegion": "Cusco", "addressCountry": "PE" }
     },
-    "organizer": { "@type": "Organization", "name": "Chakana One Travel", "url": "https://arturozms-lgtm.github.io/chakana-one-travel/" },
-    "offers": {
-      "@type": "Offer",
-      "price": "2500",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/LimitedAvailability",
-      "url": "https://arturozms-lgtm.github.io/chakana-one-travel/#precio"
-    }
+    "organizer": { "@type": "Organization", "name": "Chakana One Travel", "url": "https://arturozms-lgtm.github.io/chakana-one-travel/" }
   }
   </script>
 
@@ -969,11 +962,23 @@
 
       <div class="precio__card">
 
-        <!-- Monto -->
-        <div class="precio__amount">
-          <span class="precio__currency">USD</span>
-          <span class="precio__number">2,500</span>
-          <span class="precio__per" data-es="por persona" data-en="per person">por persona</span>
+        <!-- Consulta de inversión -->
+        <div class="precio__quote">
+          <p class="precio__quote-label"
+             data-es="Inversión por persona" data-en="Investment per person">Inversión por persona</p>
+          <p class="precio__quote-text"
+             data-es="Compartimos la inversión, la disponibilidad real de cupos y las condiciones de reserva de forma personal, por WhatsApp. Preferimos conversarlo contigo: cada retiro se prepara para un grupo reducido y queremos resolver tus dudas antes de que decidas."
+             data-en="We share the investment, the real availability of places and the booking terms personally, on WhatsApp. We prefer to talk it through with you: each retreat is prepared for a small group and we want to answer your questions before you decide.">
+            Compartimos la inversión, la disponibilidad real de cupos y las condiciones de reserva de forma personal, por WhatsApp. Preferimos conversarlo contigo: cada retiro se prepara para un grupo reducido y queremos resolver tus dudas antes de que decidas.
+          </p>
+          <a href="https://wa.me/51949745661?text=Hola%20Kurmi%2C%20quiero%20conocer%20la%20inversi%C3%B3n%20y%20la%20disponibilidad%20del%20Capac%20Inti%20Raymi%20%E2%80%94%20Diciembre%202026%20(22%20al%2028).%20%C2%BFMe%20puedes%20enviar%20los%20detalles%3F"
+             class="btn btn--gold precio__quote-cta" target="_blank" rel="noopener"
+             data-es="Consultar la inversión por WhatsApp" data-en="Ask about the investment on WhatsApp">
+            Consultar la inversión por WhatsApp
+          </a>
+          <p class="precio__quote-note"
+             data-es="Respondemos el mismo día · Grupo reducido · Cupos limitados"
+             data-en="We reply the same day · Small group · Limited places">Respondemos el mismo día · Grupo reducido · Cupos limitados</p>
         </div>
 
         <!-- Incluye -->
@@ -985,20 +990,32 @@
           <li data-es="Transporte los 7 días" data-en="Transport for 7 days">Transporte los 7 días</li>
         </ul>
 
-        <!-- Pasos de pago -->
+        <!-- Cómo se reserva -->
         <div class="precio__payment">
           <div class="precio__step">
             <span class="precio__step-num">01</span>
             <div>
-              <strong data-es="50% ahora — Julio 2026" data-en="50% now — July 2026">50% ahora — Julio 2026</strong>
-              <p data-es="Reserva tu lugar con USD 1,250" data-en="Reserve your spot with USD 1,250">Reserva tu lugar con USD 1,250</p>
+              <strong data-es="Escríbenos" data-en="Write to us">Escríbenos</strong>
+              <p data-es="Te enviamos la inversión, los cupos disponibles y las condiciones de reserva."
+                 data-en="We send you the investment, available places and booking terms.">Te enviamos la inversión, los cupos disponibles y las condiciones de reserva.</p>
             </div>
           </div>
           <div class="precio__step">
             <span class="precio__step-num">02</span>
             <div>
-              <strong data-es="50% restante — Diciembre 2026" data-en="50% remaining — December 2026">50% restante — Diciembre 2026</strong>
-              <p data-es="Al llegar al retiro · USD 1,250" data-en="Upon arrival at the retreat · USD 1,250">Al llegar al retiro · USD 1,250</p>
+              <strong data-es="Completa el cuestionario" data-en="Fill in the questionnaire">Completa el cuestionario</strong>
+              <p data-es="Nos permite conocerte, cuidar tu proceso y confirmar que el retiro es adecuado para ti."
+                 data-en="It lets us get to know you, care for your process and confirm the retreat is right for you.">Nos permite conocerte, cuidar tu proceso y confirmar que el retiro es adecuado para ti.</p>
+              <a class="precio__step-link" href="#inscripcion"
+                 data-es="Ir al cuestionario →" data-en="Go to the questionnaire →">Ir al cuestionario →</a>
+            </div>
+          </div>
+          <div class="precio__step">
+            <span class="precio__step-num">03</span>
+            <div>
+              <strong data-es="Reserva con el 50%" data-en="Reserve with 50%">Reserva con el 50%</strong>
+              <p data-es="Aseguras tu lugar por transferencia. El 50% restante se paga al llegar al retiro."
+                 data-en="You secure your place by bank transfer. The remaining 50% is paid on arrival at the retreat.">Aseguras tu lugar por transferencia. El 50% restante se paga al llegar al retiro.</p>
             </div>
           </div>
         </div>
@@ -1013,8 +1030,8 @@
 
         <!-- Tab: Transferencia -->
         <div class="pago__panel active" id="tab-transferencia">
-          <p class="pago__intro" data-es="Realiza la transferencia del 50% (USD 1,250) a la siguiente cuenta y envía tu comprobante por WhatsApp para confirmar tu reserva." data-en="Transfer 50% (USD 1,250) to the following account and send your receipt via WhatsApp to confirm your spot.">
-            Realiza la transferencia del 50% (USD&nbsp;1,250) a la siguiente cuenta y envía tu comprobante por WhatsApp para confirmar tu reserva.
+          <p class="pago__intro" data-es="Una vez confirmemos contigo el monto y tu cupo, realiza la transferencia del 50% de reserva a la siguiente cuenta y envía tu comprobante por WhatsApp." data-en="Once we confirm the amount and your place with you, transfer the 50% deposit to the following account and send your receipt via WhatsApp.">
+            Una vez confirmemos contigo el monto y tu cupo, realiza la transferencia del 50% de reserva a la siguiente cuenta y envía tu comprobante por WhatsApp.
           </p>
 
           <div class="banco__card">
@@ -1040,8 +1057,9 @@
             </div>
             <div class="banco__row">
               <span class="banco__label" data-es="Monto a transferir" data-en="Amount to transfer">Monto a transferir</span>
-              <span class="banco__value banco__value--gold">USD 1,250 <span class="banco__note" data-es="(50% de reserva)" data-en="(50% deposit)">(50% de reserva)</span></span>
-              <button class="copy-btn" data-copy="1250" aria-label="Copiar monto">⎘</button>
+              <span class="banco__value banco__value--gold"
+                    data-es="50% de reserva — te lo confirmamos por WhatsApp"
+                    data-en="50% deposit — we confirm it with you on WhatsApp">50% de reserva — te lo confirmamos por WhatsApp</span>
             </div>
           </div>
 
@@ -1513,8 +1531,8 @@
             </button>
           </h3>
           <div class="faq__panel" id="faq-6">
-            <p data-es="Reservas con el 50% (USD 1,250) por transferencia y el 50% restante se paga al llegar al retiro. Para conocer las condiciones de cambio de fecha o cancelación, escríbenos por WhatsApp y te las explicamos antes de que pagues."
-               data-en="You reserve with 50% (USD 1,250) by bank transfer and pay the remaining 50% upon arrival. For date-change or cancellation terms, message us on WhatsApp and we'll explain everything before you pay.">Reservas con el 50% (USD 1,250) por transferencia y el 50% restante se paga al llegar al retiro. Para conocer las condiciones de cambio de fecha o cancelación, escríbenos por WhatsApp y te las explicamos antes de que pagues.</p>
+            <p data-es="La inversión te la enviamos por WhatsApp junto con la disponibilidad. Reservas con el 50% por transferencia y el 50% restante se paga al llegar al retiro. Las condiciones de cambio de fecha o cancelación te las explicamos antes de que pagues."
+               data-en="We send you the investment on WhatsApp along with availability. You reserve with 50% by bank transfer and pay the remaining 50% on arrival. We explain date-change and cancellation terms before you pay.">La inversión te la enviamos por WhatsApp junto con la disponibilidad. Reservas con el 50% por transferencia y el 50% restante se paga al llegar al retiro. Las condiciones de cambio de fecha o cancelación te las explicamos antes de que pagues.</p>
           </div>
         </div>
 

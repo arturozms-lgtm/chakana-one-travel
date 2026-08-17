@@ -1120,33 +1120,61 @@ ul { list-style: none; }
   padding: clamp(2rem, 5vw, 3.5rem);
 }
 
-.precio__amount {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
+/* Consulta de inversión (sin monto público) */
+.precio__quote {
+  border-bottom: 1px solid rgba(200,146,42,0.18);
+  padding-bottom: 2rem;
+  margin-bottom: 2.25rem;
 }
 
-.precio__currency {
+.precio__quote-label {
   font-family: var(--f-util);
-  font-size: 1rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
   color: var(--c-gold);
-  letter-spacing: 0.1em;
+  margin-bottom: 0.9rem;
 }
 
-.precio__number {
-  font-family: var(--f-display);
-  font-size: clamp(3rem, 6vw, 4.5rem);
-  color: var(--c-white);
-  line-height: 1;
+.precio__quote-text {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: var(--c-mist);
+  max-width: 52ch;
 }
 
-.precio__per {
+.precio__quote-cta {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 1.75rem;
+}
+
+.precio__step-link {
+  display: inline-block;
   font-family: var(--f-util);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  border-bottom: 1px solid rgba(200,146,42,0.35);
+  padding-bottom: 2px;
+  margin-top: 0.6rem;
+  transition: var(--transition);
+}
+
+.precio__step-link:hover { color: var(--c-gold-lt); border-bottom-color: var(--c-gold-lt); }
+
+.precio__quote-note {
+  font-family: var(--f-util);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
   color: var(--c-stone);
-  letter-spacing: 0.1em;
+  text-align: center;
+  margin-top: 0.9rem;
 }
 
 .precio__includes {
