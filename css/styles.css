@@ -1177,6 +1177,16 @@ ul { list-style: none; }
   margin-top: 0.9rem;
 }
 
+.precio__includes-title {
+  font-family: var(--f-util);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-bottom: 1.1rem;
+}
+
 .precio__includes {
   margin-bottom: 2.5rem;
   display: flex;
